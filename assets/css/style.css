@@ -6,9 +6,14 @@ body {
     background-color: #FFFFFF;
 }
 
+.navbar-brand {
+    margin-right: 0px;
+}
+
 h1 {
     font-family: "teko", sans-serif;
     font-weight: 500;
+    color: #43464b;
 }
 
 #form-container {
