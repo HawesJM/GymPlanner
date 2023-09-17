@@ -55,3 +55,14 @@ h1 {
     border-width: 5px;
     border-color: #7df9ffb3;
 }
+
+#footer-section {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #FFFFFF;
+    color: white;
+    text-align: center;
+    height: 22%;
+}
