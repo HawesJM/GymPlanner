@@ -62,34 +62,35 @@
                 <button class="btn btn-primary" id="start-button">
                     <h2>Build Your Workout</h2>
                 </button>
-                <form id="personal-form">
-                    <div class="form-group col-sm-6 mx-auto personalinfo">
-                        <label for="name">Name</label>
-                        <input type="name" class="form-control" id="inputname" aria-describedby="emailHelp"
-                            placeholder="Your name" />
+                <form id="details-form"  action="post">
+                    <div class="tab" id="personal-info">
+                        <div class="form-group col-sm-6 mx-auto personalinfo">
+                            <label for="name">Name</label>
+                            <input type="name" class="form-control" id="inputname" aria-describedby="emailHelp" placeholder="Your name" />
+                        </div>
+                        <div class="form-group col-sm-6 mx-auto personalinfo">
+                            <label for="email">Email Address</label>
+                            <input type="email" class="form-control" id="inputemail" placeholder="Your email" />
+                        </div>
+                        <div class="form-group col-sm-6 mx-auto personalinfo">
+                            <label for="age">Age</label>
+                            <input type="number" class="form-control" id="inputage" placeholder="Your age" />
+                        </div>
+                        <div class="form-check personalinfo">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1" />
+                            <label class="form-check-label" for="exampleCheck1">Proceed</label>
+                        </div>
                     </div>
-                    <div class="form-group col-sm-6 mx-auto personalinfo">
-                        <label for="email">Email Address</label>
-                        <input type="email" class="form-control" id="inputemail" placeholder="Your email" />
+                    <div id="workoutinfo" class="workout-info-next">
+                        <div class="form-group col-sm-6 mx-auto" >
+                            <label for="goals">Your workout goals</label>
+                            <input type="text" class="form-control" id="inputgoals" placeholder="Your name" />
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
                     </div>
-                    <div class="form-group col-sm-6 mx-auto personalinfo">
-                        <label for="age">Age</label>
-                        <input type="number" class="form-control" id="inputage" placeholder="Your age" />
-                    </div>
-                    <div class="form-check personalinfo">
-                        <input type="checkbox" class="form-check-input" id="exampleCheck1" />
-                        <label class="form-check-label" for="exampleCheck1">Proceed</label>
-                    </div>
-                    <button type="submit" class="btn btn-primary" id="form1submit">Submit</button>
-                </form>
-                <form id="workout-form">
-                    <div class="form-group col-sm-6 mx-auto personalinfo">
-                        <label for="goals">Your workout goals</label>
-                        <input type="text" class="form-control" id="inputgoals" placeholder="Your name" />
-                    </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
                 </form>
             </div>
+            <button type="button" id="nextBtn1">Next</button>
         </section>
 
     </main>
