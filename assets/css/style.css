@@ -45,7 +45,11 @@ h1 {
     color: #43464b;
 }
 
-#form-fill {
+#personal-form {
+    display: none;
+}
+
+#workout-form {
     display: none;
 }
 
