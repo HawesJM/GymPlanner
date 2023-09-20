@@ -66,7 +66,7 @@
                     <div class="tab" id="personal-info">
                         <div class="form-group col-sm-6 mx-auto personalinfo">
                             <label for="name">Name</label>
-                            <input type="name" class="form-control" id="inputname" aria-describedby="emailHelp" placeholder="Your name" />
+                            <input type="name" class="form-control" id="inputname" aria-describedby="emailHelp" placeholder="Your name"/>
                         </div>
                         <div class="form-group col-sm-6 mx-auto personalinfo">
                             <label for="email">Email Address</label>
@@ -80,17 +80,25 @@
                             <input type="checkbox" class="form-check-input" id="exampleCheck1" />
                             <label class="form-check-label" for="exampleCheck1">Proceed</label>
                         </div>
+                        <button type="button" id="nextBtn1">Next</button>
                     </div>
-                    <div id="workoutinfo" class="workout-info-next">
-                        <div class="form-group col-sm-6 mx-auto" >
-                            <label for="goals">Your workout goals</label>
+                    <div id="workoutinfo" class="workout-info-next form-group col-sm-6 mx-auto"> Workout Goals
                             <input type="text" class="form-control" id="inputgoals" placeholder="Your name" />
-                        </div>
-                        <button type="submit" class="btn btn-primary">Submit</button>
+                            <input type="radio" name="workout-type" class="workout-type-form" id="gymyes" value="yes" checked>Yes</input>
+                            <input type="radio" name="workout-type" class="workout-type-form" id="gymno" value="no" checked>No</input>
+                            <input type="radio" name="workout-type" class="workout-type-form" id="gymyes" value="yes" checked>Yes</input>
+                            <input type="radio" name="workout-type" class="workout-type-form" id="gymno" value="no" checked>No</input>
+                        <button type="button" id="nextBtn2" class="hiddenbutton">Next</button>
+                    </div>
+                    <div id="membership-status" class="membership-status-hidden">
+                        <input type="radio" name="affirmative" id="gymyes" value="yes" checked>Yes</input>
+                        <input type="radio" name="negative" id="gymno" value="no" checked>No</input>
                     </div>
                 </form>
             </div>
-            <button type="button" id="nextBtn1">Next</button>
+            <div class="container-fluid mx-auto">
+                
+            </div>
         </section>
 
     </main>

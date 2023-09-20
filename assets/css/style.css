@@ -53,12 +53,21 @@ h1 {
     display: none;
 }
 
+.membership-status-hidden {
+    display: none;
+}
+
 .quiz-background {
     background-color: #FFFFFF;
     border-style: solid;
     border-width: 5px;
     border-color: #7df9ffb3;
 }
+
+.hiddenbutton {
+    display: none;
+}
+
 
 #footer-section {
     position: fixed;
