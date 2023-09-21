@@ -63,6 +63,9 @@
                     <h2>Build Your Workout</h2>
                 </button>
                 <form id="details-form"  action="post">
+
+        <!--personal info - form section one-->
+
                     <div class="tab" id="personal-info">
                         <div class="form-group col-sm-6 mx-auto personalinfo">
                             <label for="name">Name</label>
@@ -76,23 +79,26 @@
                             <label for="age">Age</label>
                             <input type="number" class="form-control" id="inputage" placeholder="Your age" />
                         </div>
-                        <div class="form-check personalinfo">
-                            <input type="checkbox" class="form-check-input" id="exampleCheck1" />
-                            <label class="form-check-label" for="exampleCheck1">Proceed</label>
-                        </div>
                         <button type="button" id="nextBtn1">Next</button>
                     </div>
+
+        <!--workout goals - form section two-->
+
                     <div id="workoutinfo" class="workout-info-next form-group col-sm-6 mx-auto"> Workout Goals
-                            <input type="text" class="form-control" id="inputgoals" placeholder="Your name" />
-                            <input type="radio" name="workout-type" class="workout-type-form" id="gymyes" value="yes" checked>Yes</input>
-                            <input type="radio" name="workout-type" class="workout-type-form" id="gymno" value="no" checked>No</input>
-                            <input type="radio" name="workout-type" class="workout-type-form" id="gymyes" value="yes" checked>Yes</input>
-                            <input type="radio" name="workout-type" class="workout-type-form" id="gymno" value="no" checked>No</input>
+                        <br>
+                            <input type="radio" name="workout-type" class="workout-type-form" id="gym1" value="plan1" checked>Endurance & Fitness</input>
+                            <input type="radio" name="workout-type" class="workout-type-form" id="gym2" value="plan2" checked>Strength & Sculpture</input>
+                            <input type="radio" name="workout-type" class="workout-type-form" id="gym3" value="plan3" checked>Balance & Flexibility</input>
+                        <br>    
                         <button type="button" id="nextBtn2" class="hiddenbutton">Next</button>
                     </div>
-                    <div id="membership-status" class="membership-status-hidden">
-                        <input type="radio" name="affirmative" id="gymyes" value="yes" checked>Yes</input>
-                        <input type="radio" name="negative" id="gymno" value="no" checked>No</input>
+
+        <!--gym access - form section three-->
+
+                    <div id="membership-status" class="membership-status-hidden">Do you have acces to a gym?
+                        <br>
+                        <input type="radio" name="gymaccess" id="gymyes" value="yes" checked>Yes</input>
+                        <input type="radio" name="gymaccess" id="gymno" value="no" checked>No</input>
                     </div>
                 </form>
             </div>

@@ -1,3 +1,5 @@
+/* general page styling */
+
 body {
     background-color: #ED6B47;
 }
@@ -15,6 +17,19 @@ h1 {
     font-weight: 500;
     color: #43464b;
 }
+
+#footer-section {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #FFFFFF;
+    color: white;
+    text-align: center;
+    height: 22%;
+}
+
+/* form styling */
 
 #form-container {
     position: absolute;
@@ -49,12 +64,20 @@ h1 {
     display: none;
 }
 
+#nextBtn1 {
+    margin-top: 5px;
+}
+
 .workout-info-next {
     display: none;
 }
 
 .membership-status-hidden {
     display: none;
+}
+
+.membership-status-show {
+    display: block;
 }
 
 .quiz-background {
@@ -66,16 +89,4 @@ h1 {
 
 .hiddenbutton {
     display: none;
-}
-
-
-#footer-section {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background-color: #FFFFFF;
-    color: white;
-    text-align: center;
-    height: 22%;
 }

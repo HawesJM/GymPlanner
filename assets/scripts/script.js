@@ -6,6 +6,8 @@ $(document).ready(function () {
     });
 });
 
+// form page 1 progress function
+
 $("#nextBtn1").click(function () {
     $("#personal-info").slideUp("fast");
     $("#workoutinfo").removeClass("workout-info-next");
@@ -19,5 +21,5 @@ $(".workout-type-form").click(function () {
 
 $("#nextBtn2").click(function () {
     $("#workoutinfo").slideUp("fast");
-    $("#membership-status").removeClass(".membership-status-hidden");
+    $("#membership-status").addClass("membership-status-show");
 });
