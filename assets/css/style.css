@@ -72,6 +72,16 @@ h1 {
     display: none;
 }
 
+.workout-info-next h3 {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.workout-icon {
+    font-size: 24px;
+    color: #112A46;
+}
+
 .membership-status-hidden {
     display: none;
 }
