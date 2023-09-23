@@ -24,6 +24,25 @@ $("#nextBtn2").click(function () {
     $("#membership-status").addClass("membership-status-show");
 });
 
+// form page 3 progress function
+
+$("#membership-status").click(function () {
+    $("#nextBtn3").removeClass("hiddenbutton");
+});
+
+$("#nextBtn3").click(function () {
+    $("#membership-status").slideUp("fast");
+    $("#stats").removeClass("stats-hidden");
+});
+
+// form page 4 progress function
+
+$("#nextBtn4").click(function () {
+    $("#stats").slideUp("fast");
+    $("#times").removeClass("times-hidden");
+});
+
+
 // creating variables
 
 let form = document.getElementById("details-form");
