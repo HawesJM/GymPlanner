@@ -23,3 +23,24 @@ $("#nextBtn2").click(function () {
     $("#workoutinfo").slideUp("fast");
     $("#membership-status").addClass("membership-status-show");
 });
+
+// creating variables
+
+let form = document.getElementById("details-form");
+form.addEventListener("submit", testfunction);
+
+let userName = "";
+console.log("username is ", userName);
+
+function testfunction(event) {
+    console.log("testfunction");
+    event.preventDefault();
+    console.log(event);
+    userName = document.getElementById("inputName").value;
+    console.log(userName);
+    printUsername();
+}
+
+function printUsername() {
+    console.log(userName);
+}

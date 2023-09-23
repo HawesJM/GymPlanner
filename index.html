@@ -53,61 +53,63 @@
             </div>
         </nav>
     </div>
-
+    <!--main section - form -->
     <main>
-        <!-- form section -->
-
-        <section id="planner">
-            <div id="form-container" class="container-fluid">
+        <div id="form-container">
+            <div id="button-container" class="mx-auto">
                 <button class="btn btn-primary" id="start-button">
                     <h2>Build Your Workout</h2>
                 </button>
-                <form id="details-form"  action="post">
-
-        <!--personal info - form section one-->
-
-                    <div class="tab" id="personal-info">
-                        <div class="form-group col-sm-6 mx-auto personalinfo">
-                            <label for="name">Name</label>
-                            <input type="name" class="form-control" id="inputname" aria-describedby="emailHelp" placeholder="Your name"/>
-                        </div>
-                        <div class="form-group col-sm-6 mx-auto personalinfo">
-                            <label for="email">Email Address</label>
-                            <input type="email" class="form-control" id="inputemail" placeholder="Your email" />
-                        </div>
-                        <div class="form-group col-sm-6 mx-auto personalinfo">
-                            <label for="age">Age</label>
-                            <input type="number" class="form-control" id="inputage" placeholder="Your age" />
-                        </div>
-                        <button type="button" id="nextBtn1" class="btn btn-primary">Next</button>
-                    </div>
-
-        <!--workout goals - form section two-->
-
-                    <div id="workoutinfo" class="workout-info-next form-group col-sm-6 mx-auto"> <h3> Workout Goals </h3>
-                        <br>
-                            <input type="radio" name="workout-type" class="workout-type-form" id="gym1" value="plan1"> Endurance & Fitness |</input> <i class="fa-solid fa-stopwatch-20 fa-lg workout-icon"></i><br>
-                            <input type="radio" name="workout-type" class="workout-type-form" id="gym2" value="plan2"> Strength & Sculpture |</input> <i class="fa-solid fa-dumbbell fa-lg workout-icon"></i><br>
-                            <input type="radio" name="workout-type" class="workout-type-form" id="gym3" value="plan3"> Balance & Flexibility |</input> <i class="fa-solid fa-yin-yang fa-lg workout-icon"></i><br>
-                        <br>    
-                        <button type="button" id="nextBtn2" class="hiddenbutton btn btn-primary">Next</button>
-                    </div>
-
-        <!--gym access - form section three-->
-
-                    <div id="membership-status" class="membership-status-hidden">Do you have acces to a gym?
-                        <br>
-                        <input type="radio" name="gymaccess" id="gymyes" value="yes" checked>Yes</input>
-                        <input type="radio" name="gymaccess" id="gymno" value="no" checked>No</input>
-                    </div>
-                </form>
             </div>
-            <div class="container-fluid mx-auto">
+            <form id="details-form">
+                <div id="form-div" class="mx-auto">
+
+                    <!--personal info - form section one-->
+                    
+                    <div id="personal-info">
+                        <div class="mb-3">
+                            <label for="inputName" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="inputName" aria-describedby="usernameinput">
+                        </div>
+                        <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="exampleInputPassword1">
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                        </div>
+                    <button type="button" id="nextBtn1" class="btn btn-primary">Next</button>
+                </div>    
+                <!--workout goals - form section two-->
                 
-            </div>
-        </section>
-
-    </main>
+                <div id="workoutinfo" class="workout-info-next form-group col-sm-6 mx-auto">
+                    <h3> Workout Goals </h3>
+                    <br>
+                    <input type="radio" name="workout-type" class="workout-type-form" id="gym1" value="plan1"> Endurance & Fitness
+                    |</input> <i class="fa-solid fa-stopwatch-20 fa-lg workout-icon"></i><br>
+                    <input type="radio" name="workout-type" class="workout-type-form" id="gym2" value="plan2"> Strength & Sculpture
+                    |</input> <i class="fa-solid fa-dumbbell fa-lg workout-icon"></i><br>
+                    <input type="radio" name="workout-type" class="workout-type-form" id="gym3" value="plan3"> Balance & Flexibility
+                    |</input> <i class="fa-solid fa-yin-yang fa-lg workout-icon"></i><br>
+                    <br>
+                    <button type="button" id="nextBtn2" class="hiddenbutton btn btn-primary">Next</button>
+                </div>
+                
+                <!--gym access - form section three-->
+                
+                <div id="membership-status" class="membership-status-hidden">Do you have acces to a gym?
+                    <br>
+                    <input type="radio" name="gymaccess" id="gymyes" value="yes" checked>Yes</input>
+                    <input type="radio" name="gymaccess" id="gymno" value="no" checked>No</input>
+                </div>
+                </form>
+                </div>
+                    <button id= "form-submit-hidden" type="submit" class="btn btn-primary">Submit</button>
+                </div>
+            </form>
+        </div>
+    </main>    
 
     <!-- Footer Section -->
 
