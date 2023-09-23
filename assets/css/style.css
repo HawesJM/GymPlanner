@@ -39,6 +39,7 @@ h1 {
     margin-left: auto;
     margin-right: auto;
     width: 50%;
+    max-height: 30%;
     text-align: center;
     font-family: teko, sans-serif;
     font-weight: 500;
@@ -62,6 +63,11 @@ h1 {
 
 #details-form {
     display: none;
+}
+
+#personal-info {
+    max-height: 100%;
+    overflow: hidden;
 }
 
 #nextBtn1 {
@@ -99,4 +105,21 @@ h1 {
 
 .hiddenbutton {
     display: none;
+}
+
+/* media queries */
+
+@media (max-width: 769px) {
+    #form-container {
+        max-height: 100%;
+        width: 100%;
+    }
+
+    .title-text {
+        display: none;
+    }
+
+    .navbar-brand {
+        display: none;
+    }
 }
