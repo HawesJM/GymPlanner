@@ -22,6 +22,18 @@ h1 {
     color: #43464b;
 }
 
+h2 {
+    font-family: "teko", sans-serif;
+    font-weight: 500;
+    font-size: 32px;
+}
+
+h3 {
+    font-family: "teko", sans-serif;
+    font-weight: 300;
+    font-size: 24px;
+}
+
 #footer-section {
     position: absolute;
     left: 0;

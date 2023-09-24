@@ -49,6 +49,12 @@ $("#times").click(function () {
     $("#form-submit-button").removeClass("hiddenbutton");
 });
 
+// form refresh function
+
+$("#refresh-button").click(function () {
+    window.location.reload();
+});
+
 // function to display active form steps
 
 // creating variables
