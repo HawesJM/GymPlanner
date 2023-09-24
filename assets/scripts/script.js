@@ -42,6 +42,11 @@ $("#nextBtn4").click(function () {
     $("#times").removeClass("times-hidden");
 });
 
+// form page 4 progress function
+
+$("#times").click(function () {
+    $("#form-submit-button").removeClass("hiddenbutton");
+});
 
 // creating variables
 

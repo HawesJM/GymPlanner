@@ -113,6 +113,10 @@ h1 {
     display: none;
 }
 
+#times {
+    text-align: center;
+}
+
 .times-hidden {
     display: none;
 }
@@ -121,8 +125,8 @@ h1 {
     display: none;
 }
 
-#form-submit-hidden {
-    display: none;
+#form-submit-button {
+    text-align: center;
 }
 
 /* media queries */
