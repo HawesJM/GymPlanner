@@ -132,21 +132,30 @@ h1 {
     text-align: center;
 }
 
-/* media queries */
+/* form progress bar */
 
-/* solve mobile form size bug*/
-
-@media (max-width: 769px) {
-    #form-container {
-        max-height: 100%;
-        width: 100%;
-    }
-
-    .title-text {
-        display: none;
-    }
-
-    .navbar-brand {
-        display: none;
-    }
+#form-progress {
+    text-align: center;
 }
+
+.step {
+    height: 15px;
+    width: 15px;
+    margin: 10px 2px;
+    background-color: #112A46;
+    border: none;
+    border-radius: 50%;
+    display: inline-block;
+    opacity: 1;
+}
+
+.step:active {
+    height: 25px;
+    width: 25px;
+}
+
+.steps-hidden {
+    display: none;
+}
+
+/* media queries */

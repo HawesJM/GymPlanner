@@ -3,6 +3,7 @@ $(document).ready(function () {
         $("#details-form").slideDown("fast");
         $("#start-button").hide();
         $("#form-container").addClass("quiz-background");
+        $("#form-progress").removeClass("steps-hidden");
     });
 });
 
@@ -42,15 +43,17 @@ $("#nextBtn4").click(function () {
     $("#times").removeClass("times-hidden");
 });
 
-// form page 4 progress function
+// form page 5 progress function
 
 $("#times").click(function () {
     $("#form-submit-button").removeClass("hiddenbutton");
 });
 
+// function to display active form steps
+
 // creating variables
 
-let form = document.getElementById("details-form");
+const form = document.getElementById("details-form");
 form.addEventListener("submit", testfunction);
 
 let userName = "";
