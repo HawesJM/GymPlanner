@@ -59,21 +59,43 @@ $("#refresh-button").click(function () {
 
 // creating variables
 
+// get username  and email functions
+
 const form = document.getElementById("details-form");
-form.addEventListener("submit", testfunction);
+form.addEventListener("submit", getUserName);
 
 let userName = "";
-console.log("username is ", userName);
+console.log("username is", userName);
 
-function testfunction(event) {
-    console.log("testfunction");
+let emailAddress = "";
+console.log("email address is", emailAddress);
+
+function getUserName(event) {
+    console.log("getUserName");
     event.preventDefault();
     console.log(event);
     userName = document.getElementById("inputName").value;
     console.log(userName);
     printUsername();
+    emailAddress = document.getElementById("inputEmail").value;
+    console.log(emailAddress);
+    printEmail();
 }
 
 function printUsername() {
     console.log(userName);
 }
+
+function printEmail() {
+    console.log(emailAddress);
+}
+
+// attempt to get workout types function
+
+form.addEventListener("submit", getWorkoutType);
+
+function getWorkoutType() {
+    let workoutType = document.getElementsByName("workout-type").checked;
+
+}
+
