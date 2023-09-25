@@ -68,12 +68,12 @@
 
                     <div id="personal-info">
                         <div class="mb1">
-                            <label for="inputName" class="form-label">Name</label>
+                            <label for="inputName" class="form-label"><h3>Name</h3></label>
                             <input type="text" class="form-control" id="inputName" aria-describedby="usernameinput">
                         </div>
                         <div class="mb-1">
-                        <label for="exampleInputPassword1" class="form-label">Password</label>
-                        <input type="password" class="form-control" id="exampleInputPassword1">
+                        <label for="inputEmail" class="form-label"><h3>Email Address</h3></label>
+                        <input type="email" class="form-control" id="inputEmail" aria-describedby="emailinput">
                         </div>
                     <button type="button" id="nextBtn1" class="btn btn-primary">Next</button>
                 </div> 
@@ -95,7 +95,7 @@
                 
                 <!--gym access - form section three-->
                 
-                <div id="membership-status" class="membership-status-hidden">Do you have acces to a gym?
+                <div id="membership-status" class="membership-status-hidden"><h3>Do you have acces to a gym?</h3>
                     <br>
                     <input type="radio" name="gymaccess" id="gymyes" value="yes">Yes</input>
                     <input type="radio" name="gymaccess" id="gymno" value="no">No</input>
@@ -106,19 +106,21 @@
                 <!--vital statistics - form section four-->
 
                 <div id="stats" class="mb3 stats-hidden">
-                    <label for="inputHeight" class="form-label">Height (M)</label>
+                    <label for="inputHeight" class="form-label"><h3>Height (M)</h3></label>
                     <input type="text" class="form-control" id="inputHeight" aria-describedby="heightinput">
-                    <label for="inputWeight" class="form-label">Weight (KGs)</label>
+                    <label for="inputWeight" class="form-label"><h3>Weight (KGs)</h3></label>
                     <input type="text" class="form-control" id="inputWeight" aria-describedby="weightinput">
                     <button type="button" id="nextBtn4" class="btn btn-primary next-btn">Next</button>
                 </div>
 
                 <!--workout lengths - form section five-->
-                <div id="times" class="mb3 times-hidden">
+                <div id="times" class="mb3 times-hidden"><h3>Your usual/preferred workout length</h3>
                     <br>
-                    <input type="radio" name="gymaccess" id="gymyes" value="yes">Yes</input>
-                    <input type="radio" name="gymaccess" id="gymno" value="no">No</input>
-                    <input type="radio" name="gymaccess" id="gymno" value="no">No</input>
+                    <input type="radio" name="gymaccess" id="gymyes" value="yes"> 30-60 minutes</input>
+                    <br>
+                    <input type="radio" name="gymaccess" id="gymno" value="no"> 60-90 minutes</input>
+                    <br>
+                    <input type="radio" name="gymaccess" id="gymno" value="no"> 90-120 minutes</input>
                     <br>
                 </div>
 
@@ -139,7 +141,7 @@
                 <span class="step"></span>
                 <span class="step"></span>
                 <br>
-                <button id = "refresh-button" type="button" class="btn btn-info"><h2>Refresh the form</h2></button>
+                <button id = "refresh-button" type="button" class="btn btn-primary"><h3>Refresh the form</h3><i class="fa-solid fa-arrows-rotate"></i></button>
             </div>
     </main>   
 

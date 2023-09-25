@@ -32,6 +32,7 @@ h3 {
     font-family: "teko", sans-serif;
     font-weight: 300;
     font-size: 24px;
+    text-decoration: underline;
 }
 
 #footer-section {
@@ -134,6 +135,15 @@ h3 {
 
 .times-hidden {
     display: none;
+}
+
+.btn-primary {
+    background-color: #43464b;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #ED6B47;
 }
 
 .hiddenbutton {
