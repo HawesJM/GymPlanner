@@ -3,8 +3,11 @@
 const form = document.getElementById("details-form");
 form.addEventListener("submit", getUserDetails);
 
+const steps = document.getElementsByClassName("step");
+
 let userData = {};
 
+// work in progress
 let bmi = {};
 
 let workout = {
@@ -13,6 +16,7 @@ let workout = {
         "cardio_workouts": ["rowing", "cycling"]
     }
 };
+// work in progress
 
 // initialise form function
 
@@ -22,6 +26,7 @@ $(document).ready(function () {
         $("#start-button").hide();
         $("#form-container").addClass("quiz-background");
         $("#form-progress").removeClass("steps-hidden");
+        steps[0].style.background = "turquoise";
     });
 });
 
@@ -30,6 +35,7 @@ $(document).ready(function () {
 $("#nextBtn1").click(function () {
     $("#personal-info").slideUp("fast");
     $("#workoutinfo").removeClass("workout-info-next");
+    steps[1].style.background = "turquoise";
 });
 
 // form page 2 progress function
@@ -41,6 +47,7 @@ $(".workout-type-form").click(function () {
 $("#nextBtn2").click(function () {
     $("#workoutinfo").slideUp("fast");
     $("#membership-status").addClass("membership-status-show");
+    steps[2].style.background = "turquoise";
 });
 
 // form page 3 progress function
@@ -52,6 +59,7 @@ $("#membership-status").click(function () {
 $("#nextBtn3").click(function () {
     $("#membership-status").slideUp("fast");
     $("#stats").removeClass("stats-hidden");
+    steps[3].style.background = "turquoise";
 });
 
 // form page 4 progress function
@@ -59,6 +67,7 @@ $("#nextBtn3").click(function () {
 $("#nextBtn4").click(function () {
     $("#stats").slideUp("fast");
     $("#times").removeClass("times-hidden");
+    steps[4].style.background = "turquoise";
 });
 
 // form page 5 progress function

@@ -150,6 +150,10 @@ h3 {
     display: none;
 }
 
+input[type="radio"]:checked {
+    accent-color: #7df9ffb3;
+}
+
 #form-submit-button {
     text-align: center;
 }
@@ -164,16 +168,11 @@ h3 {
     height: 15px;
     width: 15px;
     margin: 10px 2px;
-    background-color: #112A46;
+    background-color: #FFFFFF;
     border: none;
     border-radius: 50%;
     display: inline-block;
     opacity: 1;
-}
-
-.step:active {
-    height: 25px;
-    width: 25px;
 }
 
 .steps-hidden {
