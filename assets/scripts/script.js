@@ -1,3 +1,21 @@
+// global variables
+
+const form = document.getElementById("details-form");
+form.addEventListener("submit", getUserDetails);
+
+let userData = {};
+
+let bmi = {};
+
+let workout = {
+    "lose_weight": {
+        "workout_frequency": 3,
+        "cardio_workouts": ["rowing", "cycling"]
+    }
+};
+
+// initialise form function
+
 $(document).ready(function () {
     $("#start-button").click(function () {
         $("#details-form").slideDown("fast");
@@ -57,45 +75,16 @@ $("#refresh-button").click(function () {
 
 // function to display active form steps
 
-// creating variables
+// get user data function
 
-// get username  and email functions
-
-const form = document.getElementById("details-form");
-form.addEventListener("submit", getUserName);
-
-let userName = "";
-console.log("username is", userName);
-
-let emailAddress = "";
-console.log("email address is", emailAddress);
-
-function getUserName(event) {
-    console.log("getUserName");
+function getUserDetails(event) {
     event.preventDefault();
-    console.log(event);
-    userName = document.getElementById("inputName").value;
-    console.log(userName);
-    printUsername();
-    emailAddress = document.getElementById("inputEmail").value;
-    console.log(emailAddress);
-    printEmail();
-}
-
-function printUsername() {
-    console.log(userName);
-}
-
-function printEmail() {
-    console.log(emailAddress);
-}
-
-// attempt to get workout types function
-
-form.addEventListener("submit", getWorkoutType);
-
-function getWorkoutType() {
-    let workoutType = document.getElementsByName("workout-type").checked;
-
-}
-
+    console.log(userData);
+    userData["name"] = document.getElementById("inputName").value;
+    userData["email"] = document.getElementById("inputEmail").value;
+    userData["workout_goal"] = document.querySelector('input[name="workout-type"]:checked').value;
+    userData["gym_access"] = document.querySelector('input[name="gymaccess"]:checked').value;
+    userData["height"] = document.getElementById("inputHeight").value;
+    userData["weight"] = document.getElementById("inputWeight").value;
+    userData["workout_length"] = document.querySelector('input[name="gymtime"]:checked').value;
+};
