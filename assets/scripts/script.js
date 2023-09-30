@@ -98,6 +98,9 @@ function getUserDetails(event) {
     userData["workout_length"] = document.querySelector('input[name="gymtime"]:checked').value;
 };
 
+
+
+
 // hide submitted form function
 
 $("#form-submit").click(function () {
@@ -113,11 +116,11 @@ $("#form-submit").click(function () {
 });
 
 // show workout plan function
-
 $("#form-submit").click(function () {
-    showResults();
-
-    function showResults() {
+    setTimeout(function () {
         $("#results-container").removeClass("results-hidden");
-    }
+        document.getElementById("name_heading").innerHTML += userData.name;
+        document.getElementById("goals_heading").innerHTML += userData.workout_goal;
+    }, 100);
 });
+
