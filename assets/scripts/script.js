@@ -7,7 +7,6 @@ const steps = document.getElementsByClassName("step");
 
 let userData = {};
 
-// work in progress
 let bmi = {};
 
 let workout = {
@@ -96,10 +95,10 @@ function getUserDetails(event) {
     userData["height"] = document.getElementById("inputHeight").value;
     userData["weight"] = document.getElementById("inputWeight").value;
     userData["workout_length"] = document.querySelector('input[name="gymtime"]:checked').value;
+    bmi = (userData.weight / (userData.height * userData.height) * 10000);
+    console.log(bmi);
+
 };
-
-
-
 
 // hide submitted form function
 
@@ -121,6 +120,6 @@ $("#form-submit").click(function () {
         $("#results-container").removeClass("results-hidden");
         document.getElementById("name_heading").innerHTML += userData.name;
         document.getElementById("goals_heading").innerHTML += userData.workout_goal;
+        document.getElementById("workout_specifics").innerHTML += workout.lose_weight.cardio_workouts[1];
     }, 100);
 });
-
