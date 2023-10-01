@@ -11,8 +11,8 @@ let bmi = {};
 
 let workout = {
     "lose_weight": {
-        "workout_frequency": 3,
-        "cardio_workouts": ["rowing", "cycling"]
+        "workout_frequency": [3, 5],
+        "cardio_workouts": [" rowing", " cycling", " light jogging", " distance running"]
     }
 };
 // work in progress
@@ -120,6 +120,17 @@ $("#form-submit").click(function () {
         $("#results-container").removeClass("results-hidden");
         document.getElementById("name_heading").innerHTML += userData.name;
         document.getElementById("goals_heading").innerHTML += userData.workout_goal;
-        document.getElementById("workout_specifics").innerHTML += workout.lose_weight.cardio_workouts[1];
+        if (bmi > 25) {
+            document.getElementById("workout_frequency").innerHTML += workout.lose_weight.workout_frequency[0] + " times a week";
+            let [cardio1, cardio2, cardio3] = workout.lose_weight.cardio_workouts;
+            console.log(cardio1, cardio2, cardio3);
+            document.getElementById("cardio_exercises").innerHTML += cardio1 + cardio2 + cardio3;
+        }
+        else {
+            console.log(bmi);
+            let upTo = " up to " + workout.lose_weight.workout_frequency[1] + " times a week";
+            console.log(upTo);
+            document.getElementById("workout_frequency").innerHTML += upTo;
+        }
     }, 100);
 });

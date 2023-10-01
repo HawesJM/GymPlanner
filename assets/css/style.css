@@ -190,6 +190,7 @@ input[type="radio"]:checked {
 }
 
 .results-shown {
+    padding: 10px;
     background-color: #43464b;
     margin: auto;
     max-width: 80%;
