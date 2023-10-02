@@ -120,17 +120,37 @@ $("#form-submit").click(function () {
         $("#results-container").removeClass("results-hidden");
         document.getElementById("name_heading").innerHTML += userData.name;
         document.getElementById("goals_heading").innerHTML += userData.workout_goal;
-        if (bmi > 25) {
-            document.getElementById("workout_frequency").innerHTML += workout.lose_weight.workout_frequency[0] + " times a week";
-            let [cardio1, cardio2, cardio3] = workout.lose_weight.cardio_workouts;
-            console.log(cardio1, cardio2, cardio3);
-            document.getElementById("cardio_exercises").innerHTML += cardio1 + cardio2 + cardio3;
+        if (userData.workout_goal == "Endurance & Fitness") {
+            enduranceAndFitness();
+        }
+        else if (userData.workout_goal == "Strength & Sculpture") {
+            strengthAndSculpture();
         }
         else {
-            console.log(bmi);
-            let upTo = " up to " + workout.lose_weight.workout_frequency[1] + " times a week";
-            console.log(upTo);
-            document.getElementById("workout_frequency").innerHTML += upTo;
+            balanceAndFlexibility();
         }
     }, 100);
 });
+
+function enduranceAndFitness() {
+    if (bmi > 25) {
+        document.getElementById("workout_frequency").innerHTML += workout.lose_weight.workout_frequency[0] + " times a week";
+        let [cardio1, cardio2, cardio3] = workout.lose_weight.cardio_workouts;
+        console.log(cardio1, cardio2, cardio3);
+        document.getElementById("cardio_exercises").innerHTML += cardio1 + cardio2 + cardio3;
+    }
+    else {
+        console.log(bmi);
+        let upTo = " up to " + workout.lose_weight.workout_frequency[1] + " times a week";
+        console.log(upTo);
+        document.getElementById("workout_frequency").innerHTML += upTo;
+    }
+}
+
+function strengthAndSculpture() {
+    console.log("strength");
+}
+
+function balanceAndFlexibility() {
+    console.log("balance");
+}
