@@ -12,7 +12,23 @@ let bmi = {};
 let workout = {
     "lose_weight": {
         "workout_frequency": [3, 5],
-        "cardio_workouts": [" rowing", " cycling", " light jogging", " distance running"]
+        "cardio_workouts": [" rowing", " cycling", " light jogging", " distance running"],
+        "weights_workouts": [" chin ups", " dips"],
+        "rest_days": [1, 2],
+        "additional": [" diet control"]
+    },
+    "build_muscle": {
+        "workout_frequency": [3, 7],
+        "rest_days": [2],
+        "cardio_days": [1],
+        "weights_workouts": [" bench-press", " lat pulldowns", " pectoral fly", " dumbells", " leg press"],
+        "cardio_workouts": [" rowing", " treadmill walking"],
+    },
+    "stretch": {
+        "workout_frequency": [4, 5],
+        "stretches": [" lunges", " calf stretch", " hamstring stretch", " step ups", " seat stretch", " resistance band"],
+        "cardio_workouts": [" light jogging",],
+        "weights_workouts": [" tricep curls", " bicep curls"]
     }
 };
 // work in progress
@@ -114,7 +130,7 @@ $("#form-submit").click(function () {
     }
 });
 
-// show workout plan function
+// show workout plan function container
 $("#form-submit").click(function () {
     setTimeout(function () {
         $("#results-container").removeClass("results-hidden");
@@ -132,25 +148,56 @@ $("#form-submit").click(function () {
     }, 100);
 });
 
+// different workout plan functions
+
 function enduranceAndFitness() {
     if (bmi > 25) {
         document.getElementById("workout_frequency").innerHTML += workout.lose_weight.workout_frequency[0] + " times a week";
         let [cardio1, cardio2, cardio3] = workout.lose_weight.cardio_workouts;
         console.log(cardio1, cardio2, cardio3);
         document.getElementById("cardio_exercises").innerHTML += cardio1 + cardio2 + cardio3;
+        document.getElementById("additional").innerHTML += workout.lose_weight.additional;
     }
     else {
         console.log(bmi);
         let upTo = " up to " + workout.lose_weight.workout_frequency[1] + " times a week";
         console.log(upTo);
         document.getElementById("workout_frequency").innerHTML += upTo;
+        document.getElementById("cardio_exercises").innerHTML = workout.lose_weight.cardio_workouts;
+        document.getElementById("weights_exercises").innerHTML = workout.lose_weight.weights_workouts;
     }
 }
 
 function strengthAndSculpture() {
-    console.log("strength");
+    if (bmi > 25) {
+        document.getElementById("workout_frequency").innerHTML += workout.build_muscle.workout_frequency[0] + " times a week";
+        document.getElementById("weights_exercises").innerHTML += workout.build_muscle.weights_workouts;
+        console.log(workout.build_muscle.weights_workouts);
+        let [buildCardio1] = workout.build_muscle.cardio_workouts;
+        document.getElementById("cardio_exercises").innerHTML += buildCardio1;
+    }
+    else {
+        console.log(bmi);
+        let upTo = " up to " + workout.build_muscle.workout_frequency[1] + " times a week";
+        console.log(upTo);
+        document.getElementById("workout_frequency").innerHTML += upTo;
+        let [buildCardio1, buildCardio2] = workout.build_muscle.cardio_workouts;
+        document.getElementById("cardio_exercises").innerHTML += buildCardio1 + " ," + buildCardio2;
+    }
 }
 
 function balanceAndFlexibility() {
     console.log("balance");
+    if (bmi > 25) {
+        document.getElementById("workout_frequency").innerHTML += workout.stretch.workout_frequency[0] + " times a week";
+        let [stretches1, stretches2, stretches3, stretches4] = workout.stretch.stretches;
+        document.getElementById("stretches").innerHTML += stretches1 + stretches2 + stretches3 + stretches4;
+    }
+    else {
+        console.log(bmi);
+        document.getElementById("workout_frequency").innerHTML += workout.stretch.workout_frequency[1] + " times a week";
+        document.getElementById("weights_exercises").innerHTML += workout.stretch.weights_workouts;
+        document.getElementById("stretches").innerHTML += workout.stretch.stretches;
+        document.getElementById("cardio_exercises").innerHTML += workout.stretch.cardio_workouts;
+    }
 }
