@@ -15,7 +15,7 @@ let workout = {
         "cardio_workouts": [" rowing", " cycling", " light jogging", " distance running"],
         "weights_workouts": [" chin ups", " dips"],
         "rest_days": [1, 2],
-        "additional": [" diet control"]
+        "additional": [" Diet Control"]
     },
     "build_muscle": {
         "workout_frequency": [3, 7],
@@ -31,7 +31,6 @@ let workout = {
         "weights_workouts": [" tricep curls", " bicep curls"]
     }
 };
-// work in progress
 
 let verbs = [
     "Flying", "Soaring", "Falling", "Roaring", "Flaming", "Burning", "Shining", "Stalking", "Lounging"
@@ -45,6 +44,17 @@ let nouns = [
 userVerb = "";
 
 userNoun = "";
+
+let thirtySixtyPlan = {
+    "thirtySixtyLoseWeightTimings": "per workout session; perform one or two of your preferred primary exercise types with either a five minute cooldown or a ten minute break in between",
+    "thirtySixtyBuildEnduranceTimings": "per workout session; perform one of your preferred primary exercise types with a complete set one of your preferred secondary workout types"
+};
+
+let sixtyNinetyPlan = {
+    "sixtyNinetyLoseWeightTimings": "per workout session; perform 2-3 of your preferred primary exercise types all with a five minute cooldown and a ten minute break in between"
+};
+
+let workoutSpecifics = "";
 
 // initialise form function
 
@@ -126,8 +136,20 @@ function getUserDetails(event) {
     userData["workout_length"] = document.querySelector('input[name="gymtime"]:checked').value;
     bmi = (userData.weight / (userData.height * userData.height) * 10000);
     console.log(bmi);
-
+    console.log(userData.workout_length);
+    if (userData.workout_length = "30-60minutes" && bmi > 25) {
+        workoutSpecifics = thirtySixtyPlan.thirtySixtyLoseWeightTimings;
+    }
+    else if
+        (userData.workout_length = "30-60minutes" && bmi > 25) {
+        workoutSpecifics = thirtySixtyPlan.sixtyNinetyLoseWeightTimings;
+    }
+    else if
+        (userData.workout_length = "30-60minutes" && bmi < 25) {
+        workoutSpecifics = thirtySixtyPlan.thirtySixtyBuildEnduranceTimings;
+    }
 };
+
 
 // hide submitted form function
 
@@ -169,16 +191,26 @@ function enduranceAndFitness() {
         document.getElementById("workout_frequency").innerHTML += workout.lose_weight.workout_frequency[0] + " times a week";
         let [cardio1, cardio2, cardio3] = workout.lose_weight.cardio_workouts;
         console.log(cardio1, cardio2, cardio3);
+        document.getElementById("primary_type").innerHTML = "Cardio";
+        document.getElementById("secondary_type").innerHTML = "None";
         document.getElementById("cardio_exercises").innerHTML += cardio1 + cardio2 + cardio3;
         document.getElementById("additional").innerHTML += workout.lose_weight.additional;
-    }
-    else {
+        document.getElementById("plan_number").innerHTML = Math.floor(Math.random() * 100);
+        document.getElementById("plan_specifics").innerHTML += workoutSpecifics;
+
+    } else {
         console.log(bmi);
         let upTo = " up to " + workout.lose_weight.workout_frequency[1] + " times a week";
         console.log(upTo);
+        let [weights1, weights2, weights3] = workout.lose_weight.weights_workouts;
         document.getElementById("workout_frequency").innerHTML += upTo;
+        document.getElementById("primary_type").innerHTML = "Cardio";
+        document.getElementById("secondary_type").innerHTML = "Resistance";
         document.getElementById("cardio_exercises").innerHTML = workout.lose_weight.cardio_workouts;
-        document.getElementById("weights_exercises").innerHTML = workout.lose_weight.weights_workouts;
+        document.getElementById("weights_exercises").innerHTML += weights1 + weights2;
+        document.getElementById("additional").innerHTML = "None";
+        document.getElementById("plan_number").innerHTML = Math.floor(Math.random() * 100);
+        document.getElementById("plan_specifics").innerHTML += workoutSpecifics;
     }
 }
 
@@ -216,6 +248,8 @@ function balanceAndFlexibility() {
     }
 }
 
+// plan name generator function
+
 function generate() {
     userVerb = verbs[
         Math.floor(Math.random() * verbs.length)];
@@ -226,5 +260,21 @@ function generate() {
     let planNick = userVerb + userNoun;
     document.getElementById("plan_heading").innerHTML += planNick;
 }
+//    if (document.querySelector('input[name="workout-type"]:checked').value = "30-60minutes") {
+//console.log("30selected");
+    //}
+    //else if (document.querySelector('input[name="workout-type"]:checked').value = "60-90minutes") {
+    //console.log("60selected");
+//}
+//else (document.querySelector('input[name="workout-type"]:checked').value = "90-120minutes");
+//console.log("90selected");
 
-
+//        if (userData.workout_length = "30-60minutes") {
+//console.log(30);
+       // }
+       // else if (userData.workout_length = "60-90minutes") {
+    //console.log(60);
+//}
+//else (userData.workout_length = "60-90minutes"); {
+    //console.log(90);
+//}

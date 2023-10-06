@@ -133,7 +133,7 @@
 
             </form>
         </div>
-            <!-- Circles which indicates the steps of the form: -->
+            <!-- Circles which indicate the steps of the form: -->
             <div id = "form-progress" class="steps-hidden">
                 <span class="step"></span>
                 <span class="step"></span>
@@ -143,16 +143,69 @@
                 <br>
                 <button id = "refresh-button" type="button" class="btn btn-primary"><h3>Refresh the form</h3><i class="fa-solid fa-arrows-rotate"></i></button>
             </div>
+
+        <!-- specifically generated workout plan in table format -->
         <div id="results-container" class="results-shown results-hidden">
-            <h3 id="name_heading"></h3>
-            <h3 id="goals_heading"></h3>
-            <h4 id="plan_heading">The </h4>
-            <P id = "workout_frequency">Suggested weekly workout frequency:<br></P>
-            <p id = "cardio_exercises"></p>
-            <p id = "weights_exercises"></p>
-            <p id = "stretches"></p>
-            <p id = "additional"></p>
-        </div>    
+            <table class = "table table-striped">
+                <thead>
+                    <tr>
+                        <th>Name
+                        </th>
+                        <th>Plan Type
+                        </th>
+                        <th>Plan ID
+                        </th>
+                        <th>Plan Number
+                    </tr>
+                    <tr>
+                        <td id="name_heading">
+                        </td>
+                        <td id="goals_heading">
+                        </td>
+                        <td id="plan_heading">The
+                        </td>
+                        <td id="plan_number">
+                        </td>
+                    </tr>
+                </thead>    
+                <tbody>
+                    <tr>
+                        <th>Weekly Workout Frequency
+                        </th>
+                        <th>Primary Workout
+                        </th>
+                        <th>Secondary Workout 
+                        </th>
+                        <th>Extras
+                        </th>
+                    </tr>
+                    <tr>
+                        <td id="workout_frequency">
+                        </td>
+                        <td id="primary_type">
+                        </td>
+                        <td id="secondary_type">
+                        </td>
+                        <td id="additional">
+                        </td>
+                    </tr>  
+                    <tr>
+                        <th colspan = "4">Workout Specifics
+                        </th>
+                    </tr> 
+                    <tr>
+                        <td id="cardio_exercises" colspan = "4"></td>
+                    </tr>
+                        <tr>
+                            <td id="weights_exercises" colspan="4"></td>
+                        </tr>
+                    <tr>
+                        <td id ="plan_specifics" colspan = "4">
+                        </td>
+                    </tr> 
+                </tbody>     
+            </table>
+        </div>   
     </main>   
 
     <!-- Footer Section -->
