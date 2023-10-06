@@ -33,6 +33,19 @@ let workout = {
 };
 // work in progress
 
+let verbs = [
+    "Flying", "Soaring", "Falling", "Roaring", "Flaming", "Burning", "Shining", "Stalking", "Lounging"
+
+];
+
+let nouns = [
+    " Tiger", " Dragon", " Leopard", " Rhino", " Stork", " Lemur", " Cobra"
+];
+
+userVerb = "";
+
+userNoun = "";
+
 // initialise form function
 
 $(document).ready(function () {
@@ -145,6 +158,7 @@ $("#form-submit").click(function () {
         else {
             balanceAndFlexibility();
         }
+        generate();
     }, 100);
 });
 
@@ -201,3 +215,16 @@ function balanceAndFlexibility() {
         document.getElementById("cardio_exercises").innerHTML += workout.stretch.cardio_workouts;
     }
 }
+
+function generate() {
+    userVerb = verbs[
+        Math.floor(Math.random() * verbs.length)];
+    console.log(userVerb);
+    userNoun = nouns[
+        Math.floor(Math.random() * nouns.length)];
+    console.log(userNoun);
+    let planNick = userVerb + userNoun;
+    document.getElementById("plan_heading").innerHTML += planNick;
+}
+
+
