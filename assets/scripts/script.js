@@ -12,8 +12,8 @@ let bmi = {};
 let workout = {
     "lose_weight": {
         "workout_frequency": [3, 5],
-        "cardio_workouts": [" rowing", " cycling", " light jogging", " distance running"],
-        "weights_workouts": [" chin ups", " dips"],
+        "cardio_workouts": [" rowing | ", " cycling | ", " light jogging | ", " distance running | "],
+        "weights_workouts": [" chin-ups | ", " dips | "],
         "rest_days": [1, 2],
         "additional": [" Diet Control"]
     },
@@ -33,12 +33,12 @@ let workout = {
 };
 
 let verbs = [
-    "Flying", "Soaring", "Falling", "Roaring", "Flaming", "Burning", "Shining", "Stalking", "Lounging"
+    "Flying", "Soaring", "Roaring", "Flaming", "Glimmering", "Shining", "Stalking", "Striking", "Shimmering", "Leaping"
 
 ];
 
 let nouns = [
-    " Tiger", " Dragon", " Leopard", " Rhino", " Stork", " Lemur", " Cobra"
+    " Tiger", " Dragon", " Leopard", " Rhino", " Eagle", " Wolf", " Cobra", " Gazelle"
 ];
 
 userVerb = "";
@@ -51,7 +51,13 @@ let thirtySixtyPlan = {
 };
 
 let sixtyNinetyPlan = {
-    "sixtyNinetyLoseWeightTimings": "per workout session; perform 2-3 of your preferred primary exercise types all with a five minute cooldown and a ten minute break in between"
+    "sixtyNinetyLoseWeightTimings": "per workout session; perform 2-3 of your preferred primary exercise types all with a five minute cooldown and a ten minute break in between",
+    "sixtyNinetyBuildEnduranceTimings": "per workout session; perform 2 of your preferred primary exercise types with two complete sets of either secondary workout type or both"
+};
+
+let ninetyOneTwentyPlan = {
+    "ninetyOneTwentyLoseWeightTimings": "per workout session; perform 3 of your preferred primary exercise types with a minimum ten minute break in between",
+    "ninetyOneTwentyBuildEnduranceTimings": "per workout session; perform 3 of your preferred primary exercise types, with a five minute break in between each, finish with two complete sets of each secondary workout type"
 };
 
 let workoutSpecifics = "";
@@ -137,16 +143,35 @@ function getUserDetails(event) {
     bmi = (userData.weight / (userData.height * userData.height) * 10000);
     console.log(bmi);
     console.log(userData.workout_length);
-    if (userData.workout_length = "30-60minutes" && bmi > 25) {
+    // to build specific workout plan based on selections and input
+    if (document.getElementById("gym30").checked === true && bmi > 25) {
         workoutSpecifics = thirtySixtyPlan.thirtySixtyLoseWeightTimings;
+        console.log("plan30");
     }
     else if
-        (userData.workout_length = "30-60minutes" && bmi > 25) {
-        workoutSpecifics = thirtySixtyPlan.sixtyNinetyLoseWeightTimings;
+        (document.getElementById("gym60").checked === true && bmi > 25) {
+        workoutSpecifics = sixtyNinetyPlan.sixtyNinetyLoseWeightTimings;
+        console.log("plan60hallelujah");
     }
     else if
-        (userData.workout_length = "30-60minutes" && bmi < 25) {
+        (document.getElementById("gym90").checked === true && bmi > 25) {
+        workoutSpecifics = ninetyOneTwentyPlan.ninetyOneTwentyLoseWeightTimings;
+        console.log("plan90");
+    }
+    else if
+        (document.getElementById("gym30").checked === true && bmi < 25) {
         workoutSpecifics = thirtySixtyPlan.thirtySixtyBuildEnduranceTimings;
+        console.log("specialsausage");
+    }
+    else if
+        (document.getElementById("gym60").checked === true && bmi < 25) {
+        workoutSpecifics = sixtyNinetyPlan.sixtyNinetyBuildEnduranceTimings;
+        console.log("specialsausages");
+    }
+    else if
+        (document.getElementById("gym90").checked === true && bmi < 25) {
+        workoutSpecifics = ninetyOneTwentyPlan.ninetyOneTwentyBuildEnduranceTimings;
+        console.log("specialsausagesausage");
     }
 };
 
@@ -195,21 +220,22 @@ function enduranceAndFitness() {
         document.getElementById("secondary_type").innerHTML = "None";
         document.getElementById("cardio_exercises").innerHTML += cardio1 + cardio2 + cardio3;
         document.getElementById("additional").innerHTML += workout.lose_weight.additional;
-        document.getElementById("plan_number").innerHTML = Math.floor(Math.random() * 100);
+        document.getElementById("plan_number").innerHTML = Math.floor(Math.random() * 1000);
         document.getElementById("plan_specifics").innerHTML += workoutSpecifics;
 
     } else {
         console.log(bmi);
         let upTo = " up to " + workout.lose_weight.workout_frequency[1] + " times a week";
         console.log(upTo);
-        let [weights1, weights2, weights3] = workout.lose_weight.weights_workouts;
+        let [weights1, weights2] = workout.lose_weight.weights_workouts;
+        let [cardio1, cardio2, cardio3, cardio4] = workout.lose_weight.cardio_workouts;
         document.getElementById("workout_frequency").innerHTML += upTo;
         document.getElementById("primary_type").innerHTML = "Cardio";
         document.getElementById("secondary_type").innerHTML = "Resistance";
-        document.getElementById("cardio_exercises").innerHTML = workout.lose_weight.cardio_workouts;
+        document.getElementById("cardio_exercises").innerHTML += cardio1 + cardio2 + cardio3 + cardio4;
         document.getElementById("weights_exercises").innerHTML += weights1 + weights2;
         document.getElementById("additional").innerHTML = "None";
-        document.getElementById("plan_number").innerHTML = Math.floor(Math.random() * 100);
+        document.getElementById("plan_number").innerHTML = Math.floor(Math.random() * 1000);
         document.getElementById("plan_specifics").innerHTML += workoutSpecifics;
     }
 }
