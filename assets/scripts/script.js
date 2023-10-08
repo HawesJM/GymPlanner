@@ -21,8 +21,9 @@ let workout = {
         "workout_frequency": [3, 7],
         "rest_days": [2],
         "cardio_days": [1],
-        "weights_workouts": [" bench-press", " lat pulldowns", " pectoral fly", " dumbells", " leg press"],
-        "cardio_workouts": [" rowing", " treadmill walking"],
+        "weights_workouts": [" Bench Press | ", " Lat Pulldowns | ", " Pectoral Fly | ", " Dumbells | ", " Leg Press | "],
+        "cardio_workouts": [" Rowing | ", " Treadmill Walking | "],
+        "additional": [" Diet Control"],
     },
     "stretch": {
         "workout_frequency": [4, 5],
@@ -46,18 +47,18 @@ userVerb = "";
 userNoun = "";
 
 let thirtySixtyPlan = {
-    "thirtySixtyLoseWeightTimings": "per workout session; perform one or two of your preferred primary exercise types with either a five minute cooldown or a ten minute break in between",
-    "thirtySixtyBuildEnduranceTimings": "per workout session; perform one of your preferred primary exercise types with a complete set one of your preferred secondary workout types"
+    "thirtySixtyPlanATimings": "per workout session; perform one or two of your preferred primary exercise types with either a five minute cooldown or a ten minute break in between",
+    "thirtySixtyPlanBTimings": "per workout session; perform one of your preferred primary exercise types with a complete set one of your preferred secondary workout types"
 };
 
 let sixtyNinetyPlan = {
-    "sixtyNinetyLoseWeightTimings": "per workout session; perform 2-3 of your preferred primary exercise types all with a five minute cooldown and a ten minute break in between",
-    "sixtyNinetyBuildEnduranceTimings": "per workout session; perform 2 of your preferred primary exercise types with two complete sets of either secondary workout type or both"
+    "sixtyNinetyPlanATimings": "per workout session; perform 2-3 of your preferred primary exercise types all with a five minute cooldown and a ten minute break in between",
+    "sixtyNinetyPlanBTimings": "per workout session; perform 2 of your preferred primary exercise types with two complete sets of either secondary workout type or both"
 };
 
 let ninetyOneTwentyPlan = {
-    "ninetyOneTwentyLoseWeightTimings": "per workout session; perform 3 of your preferred primary exercise types with a minimum ten minute break in between",
-    "ninetyOneTwentyBuildEnduranceTimings": "per workout session; perform 3 of your preferred primary exercise types, with a five minute break in between each, finish with two complete sets of each secondary workout type"
+    "ninetyOneTwentyPlanATimings": "per workout session; perform 3 of your preferred primary exercise types with a ten minute break in between each, 10 minute cooldowns, and leave scope for repeats",
+    "ninetyOneTwentyPlanBTimings": "per workout session; perform 3 of your preferred primary exercise types, with a five minute break in between each, finish with two complete sets of each secondary workout type, leaving scope for repeats"
 };
 
 let workoutSpecifics = "";
@@ -145,32 +146,32 @@ function getUserDetails(event) {
     console.log(userData.workout_length);
     // to build specific workout plan based on selections and input
     if (document.getElementById("gym30").checked === true && bmi > 25) {
-        workoutSpecifics = thirtySixtyPlan.thirtySixtyLoseWeightTimings;
+        workoutSpecifics = thirtySixtyPlan.thirtySixtyPlanATimings;
         console.log("plan30");
     }
     else if
         (document.getElementById("gym60").checked === true && bmi > 25) {
-        workoutSpecifics = sixtyNinetyPlan.sixtyNinetyLoseWeightTimings;
+        workoutSpecifics = sixtyNinetyPlan.sixtyNinetyPlanATimings;
         console.log("plan60hallelujah");
     }
     else if
         (document.getElementById("gym90").checked === true && bmi > 25) {
-        workoutSpecifics = ninetyOneTwentyPlan.ninetyOneTwentyLoseWeightTimings;
+        workoutSpecifics = ninetyOneTwentyPlan.ninetyOneTwentyPlanATimings;
         console.log("plan90");
     }
     else if
         (document.getElementById("gym30").checked === true && bmi < 25) {
-        workoutSpecifics = thirtySixtyPlan.thirtySixtyBuildEnduranceTimings;
+        workoutSpecifics = thirtySixtyPlan.thirtySixtyPlanBTimings;
         console.log("specialsausage");
     }
     else if
         (document.getElementById("gym60").checked === true && bmi < 25) {
-        workoutSpecifics = sixtyNinetyPlan.sixtyNinetyBuildEnduranceTimings;
+        workoutSpecifics = sixtyNinetyPlan.sixtyNinetyPlanBTimings;
         console.log("specialsausages");
     }
     else if
         (document.getElementById("gym90").checked === true && bmi < 25) {
-        workoutSpecifics = ninetyOneTwentyPlan.ninetyOneTwentyBuildEnduranceTimings;
+        workoutSpecifics = ninetyOneTwentyPlan.ninetyOneTwentyPlanBTimings;
         console.log("specialsausagesausage");
     }
 };
@@ -243,18 +244,30 @@ function enduranceAndFitness() {
 function strengthAndSculpture() {
     if (bmi > 25) {
         document.getElementById("workout_frequency").innerHTML += workout.build_muscle.workout_frequency[0] + " times a week";
-        document.getElementById("weights_exercises").innerHTML += workout.build_muscle.weights_workouts;
+        let [weights1, weights2, weights3] = workout.build_muscle.weights_workouts;
+        document.getElementById("weights_exercises").innerHTML += weights1 + weights2 + weights3;
         console.log(workout.build_muscle.weights_workouts);
         let [buildCardio1] = workout.build_muscle.cardio_workouts;
+        document.getElementById("primary_type").innerHTML = "Weights";
+        document.getElementById("secondary_type").innerHTML = "Rowing Cooldown";
+        document.getElementById("plan_number").innerHTML = Math.floor(Math.random() * 1000);
         document.getElementById("cardio_exercises").innerHTML += buildCardio1;
+        document.getElementById("additional").innerHTML += workout.build_muscle.additional;
+        document.getElementById("plan_specifics").innerHTML += workoutSpecifics;
     }
     else {
         console.log(bmi);
         let upTo = " up to " + workout.build_muscle.workout_frequency[1] + " times a week";
+        document.getElementById("plan_number").innerHTML = Math.floor(Math.random() * 1000);
         console.log(upTo);
         document.getElementById("workout_frequency").innerHTML += upTo;
+        document.getElementById("primary_type").innerHTML = "Weights";
+        document.getElementById("secondary_type").innerHTML = "Light Cardio/Resistance";
         let [buildCardio1, buildCardio2] = workout.build_muscle.cardio_workouts;
-        document.getElementById("cardio_exercises").innerHTML += buildCardio1 + " ," + buildCardio2;
+        let [buildWeights1, buildWeights2, buildWeights3, buildWeights4, buildWeights5] = workout.build_muscle.weights_workouts;
+        document.getElementById("cardio_exercises").innerHTML += buildCardio1 + buildCardio2;
+        document.getElementById("weights_exercises").innerHTML += buildWeights1 + buildWeights2 + buildWeights3 + buildWeights4 + buildWeights5;
+        document.getElementById("plan_specifics").innerHTML += workoutSpecifics;
     }
 }
 
@@ -286,21 +299,3 @@ function generate() {
     let planNick = userVerb + userNoun;
     document.getElementById("plan_heading").innerHTML += planNick;
 }
-//    if (document.querySelector('input[name="workout-type"]:checked').value = "30-60minutes") {
-//console.log("30selected");
-    //}
-    //else if (document.querySelector('input[name="workout-type"]:checked').value = "60-90minutes") {
-    //console.log("60selected");
-//}
-//else (document.querySelector('input[name="workout-type"]:checked').value = "90-120minutes");
-//console.log("90selected");
-
-//        if (userData.workout_length = "30-60minutes") {
-//console.log(30);
-       // }
-       // else if (userData.workout_length = "60-90minutes") {
-    //console.log(60);
-//}
-//else (userData.workout_length = "60-90minutes"); {
-    //console.log(90);
-//}
