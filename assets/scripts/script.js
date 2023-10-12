@@ -27,9 +27,9 @@ let workout = {
     },
     "stretch": {
         "workout_frequency": [4, 5],
-        "stretches": [" lunges", " calf stretch", " hamstring stretch", " step ups", " seat stretch", " resistance band"],
-        "cardio_workouts": [" light jogging",],
-        "weights_workouts": [" tricep curls", " bicep curls"]
+        "stretches": [" Lunges | ", " Calf Stretch | ", " Hamstring Stretch | ", " Step Ups | ", " Seat Stretch | ", " Resistance Band | "],
+        "cardio_workouts": [" Light Jogging",],
+        "poses": [" Child's Pose | ", " Standing Forward Bend | ", "Extended Side Angle | "]
     }
 };
 
@@ -53,12 +53,12 @@ let thirtySixtyPlan = {
 
 let sixtyNinetyPlan = {
     "sixtyNinetyPlanATimings": "per workout session; perform 2-3 of your preferred primary exercise types all with a five minute cooldown and a ten minute break in between",
-    "sixtyNinetyPlanBTimings": "per workout session; perform 2 of your preferred primary exercise types with two complete sets of either secondary workout type or both"
+    "sixtyNinetyPlanBTimings": "per workout session; perform 2 of your preferred primary exercise types with two complete sets of secondary workouts"
 };
 
 let ninetyOneTwentyPlan = {
     "ninetyOneTwentyPlanATimings": "per workout session; perform 3 of your preferred primary exercise types with a ten minute break in between each, 10 minute cooldowns, and leave scope for repeats",
-    "ninetyOneTwentyPlanBTimings": "per workout session; perform 3 of your preferred primary exercise types, with a five minute break in between each, finish with two complete sets of each secondary workout type, leaving scope for repeats"
+    "ninetyOneTwentyPlanBTimings": "per workout session; perform 3 of your preferred primary exercise types, with a five minute break in between each, finish with two complete sets of secondary workout types, leaving scope for repeats"
 };
 
 let workoutSpecifics = "";
@@ -275,15 +275,28 @@ function balanceAndFlexibility() {
     console.log("balance");
     if (bmi > 25) {
         document.getElementById("workout_frequency").innerHTML += workout.stretch.workout_frequency[0] + " times a week";
-        let [stretches1, stretches2, stretches3, stretches4] = workout.stretch.stretches;
-        document.getElementById("stretches").innerHTML += stretches1 + stretches2 + stretches3 + stretches4;
+        let [stretches1, stretches2, stretches3, stretches4, stretches5] = workout.stretch.stretches;
+        document.getElementById("primary_type").innerHTML = "Stretches";
+        document.getElementById("secondary_type").innerHTML = "Cardio";
+        document.getElementById("cardio_exercises").innerHTML += workout.stretch.cardio_workouts;
+        document.getElementById("stretches").innerHTML += stretches1 + stretches2 + stretches3 + stretches5;
+        document.getElementById("plan_number").innerHTML = Math.floor(Math.random() * 1000);
+        document.getElementById("plan_specifics").innerHTML += workoutSpecifics;
+        document.getElementById("additional").innerHTML += "Secondary Workout Cooldowns";
     }
     else {
         console.log(bmi);
+        let [stretches1, stretches2, stretches3, stretches4, stretches5, stretches6] = workout.stretch.stretches;
+        let [poses1, poses2, poses3] = workout.stretch.poses;
         document.getElementById("workout_frequency").innerHTML += workout.stretch.workout_frequency[1] + " times a week";
-        document.getElementById("weights_exercises").innerHTML += workout.stretch.weights_workouts;
-        document.getElementById("stretches").innerHTML += workout.stretch.stretches;
-        document.getElementById("cardio_exercises").innerHTML += workout.stretch.cardio_workouts;
+        document.getElementById("weights_exercises").innerHTML += "";
+        document.getElementById("stretches").innerHTML += stretches1 + stretches2 + stretches3 + stretches4 + stretches5 + stretches6;
+        document.getElementById("poses").innerHTML += poses1 + poses2 + poses3;
+        document.getElementById("plan_number").innerHTML = Math.floor(Math.random() * 1000);
+        document.getElementById("primary_type").innerHTML = "Stretches";
+        document.getElementById("secondary_type").innerHTML = "Poses";
+        document.getElementById("cardio_exercises").innerHTML += "";
+        document.getElementById("plan_specifics").innerHTML += workoutSpecifics;
     }
 }
 
