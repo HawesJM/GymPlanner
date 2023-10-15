@@ -225,6 +225,25 @@ input[type="radio"]:checked {
     display: none;
 }
 
+/* about page styles */
+
+#text-container {
+    width: 100%;
+    height: 100%;
+    font-family: "teko", sans-serif;
+    font-weight: 300;
+    font-size: 24px;
+    color: #fafafa;
+    background-color: #ED6B47;
+}
+
+#text-box {
+    padding: 15px;
+    width: 50%;
+    margin: auto;
+    background-color: #112A46;
+}
+
 /* media queries */
 
 @media (max-width: 540px) {
