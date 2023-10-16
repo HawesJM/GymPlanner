@@ -207,6 +207,7 @@ $("#form-submit").click(function () {
             balanceAndFlexibility();
         }
         generate();
+        resources();
     }, 100);
 });
 
@@ -311,4 +312,16 @@ function generate() {
     console.log(userNoun);
     let planNick = userVerb + userNoun;
     document.getElementById("plan_heading").innerHTML += planNick;
+}
+
+// additional resources based on gym access function
+function resources() {
+    if (document.getElementById("gymno").checked === true) {
+        let externalResource = '<a href="https://www.forbes.com/health/fitness/best-online-workout-programs/" target ="_blank">A Guide To Home Workouts</a>';
+        document.getElementById("resource_links").innerHTML += externalResource;
+    }
+    else {
+        let externalResource = '<a href="https://www.cnet.com/health/fitness/gym-etiquette-for-newbies-dont-break-these-10-important-rules/" target ="_blank">A Guide To Gym Etiquette</a>';
+        document.getElementById("resource_links").innerHTML += externalResource;
+    }
 }
