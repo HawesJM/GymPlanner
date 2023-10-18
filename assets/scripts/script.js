@@ -12,8 +12,8 @@ let bmi = {};
 let workout = {
     "lose_weight": {
         "workout_frequency": [3, 5],
-        "cardio_workouts": [" rowing | ", " cycling | ", " light jogging | ", " distance running | "],
-        "weights_workouts": [" chin-ups | ", " dips | "],
+        "cardio_workouts": [" Rowing | ", " Cycling | ", " Light Jogging | ", " Distance Running | "],
+        "weights_workouts": [" Chin-ups | ", " Dips | "],
         "rest_days": [1, 2],
         "additional": [" Diet Control"]
     },

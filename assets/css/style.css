@@ -32,6 +32,9 @@ h3 {
     font-family: "teko", sans-serif;
     font-weight: 500;
     font-size: 24px;
+}
+
+#form-background h3 {
     text-decoration: underline;
 }
 
@@ -53,6 +56,15 @@ h4 {
     height: 15%;
 }
 
+#external-resources-container a {
+    text-decoration: none;
+    font-style: italic;
+    color: #fff;
+}
+
+#external-resources-container a:hover {
+    color: #C6DAF1;
+}
 
 /* form styling */
 
@@ -235,6 +247,7 @@ input[type="radio"]:checked {
     font-size: 24px;
     color: #fafafa;
     background-color: #ED6B47;
+    text-decoration: none;
 }
 
 .text-box {
@@ -242,6 +255,8 @@ input[type="radio"]:checked {
     width: 50%;
     margin: auto;
     background-color: #112A46;
+    text-align: center;
+    text-decoration: none;
 }
 
 /* media queries */
@@ -264,5 +279,40 @@ input[type="radio"]:checked {
         width: 50%;
         height: 50%;
         margin: auto;
+    }
+
+    #text-box-about {
+        width: 100%;
+        border-style: solid;
+        border-color: #ED6B47;
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 1200px) {
+    #text-box-faq {
+        width: 100%;
+        font-size: 18px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 800px) {
+
+    .text-box {
+        width: 100%;
+        border-style: solid;
+        border-color: #ED6B47;
+    }
+
+    #text-box-faq {
+        font-size: 16px;
+    }
+
+    h2 {
+        font-size: 18px;
     }
 }
