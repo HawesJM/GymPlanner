@@ -1,7 +1,12 @@
-// global variables
+// global variables and event listeners
 
 const form = document.getElementById("details-form");
 form.addEventListener("submit", getUserDetails);
+
+document.getElementById("nextBtn1").addEventListener("click", validateEmail);
+document.getElementById("nextBtn1").addEventListener("click", validateName);
+document.getElementById("nextBtn4").addEventListener("click", validateHeight);
+document.getElementById("nextBtn4").addEventListener("click", validateWeight);
 
 const steps = document.getElementsByClassName("step");
 
@@ -323,5 +328,42 @@ function resources() {
     else {
         let externalResource = '<a href="https://www.cnet.com/health/fitness/gym-etiquette-for-newbies-dont-break-these-10-important-rules/" target ="_blank">A Guide To Gym Etiquette</a>';
         document.getElementById("resource_links").innerHTML += externalResource;
+    }
+}
+
+// validate form functions
+
+function validateEmail() {
+    let x = document.getElementById("inputEmail").value;
+    console.log(x);
+    if (x == "") {
+        alert("your email address must be entered to proceed correctly, refresh to enter");
+        return false;
+    }
+}
+function validateName() {
+    let x = document.getElementById("inputName").value;
+    console.log(x);
+    if (x == "") {
+        alert("your name must be entered to proceed correctly, refresh to enter");
+        return false;
+    }
+}
+
+function validateHeight() {
+    let x = document.getElementById("inputHeight").value;
+    console.log(x);
+    if (x == "") {
+        alert("your height must be entered to proceed correctly, refresh to enter");
+        return false;
+    }
+}
+
+function validateWeight() {
+    let x = document.getElementById("inputHeight").value;
+    console.log(x);
+    if (x == "") {
+        alert("your weight must be entered to proceed correctly, refresh to enter");
+        return false;
     }
 }
