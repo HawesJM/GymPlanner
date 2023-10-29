@@ -7,6 +7,7 @@ document.getElementById("nextBtn1").addEventListener("click", validateEmail);
 document.getElementById("nextBtn1").addEventListener("click", validateName);
 document.getElementById("nextBtn4").addEventListener("click", validateHeight);
 document.getElementById("nextBtn4").addEventListener("click", validateWeight);
+document.getElementById("form-submit").addEventListener("click", dateTime);
 
 const steps = document.getElementsByClassName("step");
 
@@ -329,6 +330,14 @@ function resources() {
         let externalResource = '<a href="https://www.cnet.com/health/fitness/gym-etiquette-for-newbies-dont-break-these-10-important-rules/" target ="_blank">A Guide To Gym Etiquette</a>';
         document.getElementById("resource_links").innerHTML += externalResource;
     }
+}
+
+// print plan specific date and time function
+
+function dateTime() {
+    let datetime = new Date();
+    console.log(datetime);
+    document.getElementById("plan_date").innerHTML += datetime;
 }
 
 // validate form functions
