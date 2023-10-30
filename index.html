@@ -62,7 +62,7 @@
                     <h2>Build Your Workout</h2>
                 </button>
             </div>
-            <form id="details-form">
+            <form id="details-form" action = "/workspaces/GymPlanner/index.html" method = post>
                 <div id="form-div" class="mx-auto">
 
                     <!--personal info - form section one-->
@@ -70,13 +70,14 @@
                     <div id="personal-info">
                         <div class="mb1">
                             <label for="inputName" class="form-label"><h3>Name</h3></label>
-                            <input type="text" class="form-control" id="inputName" aria-describedby="usernameinput">
+                            <input type="text" class="form-control" id="inputName" required aria-describedby="usernameinput">
                         </div>
                         <div class="mb-1">
                         <label for="inputEmail" class="form-label"><h3>Email Address</h3></label>
                         <input type="email" class="form-control" id="inputEmail" aria-describedby="emailinput">
                         </div>
-                    <button type="button" id="nextBtn1" class="btn btn-primary">Next</button>
+                    <button type="button" id="userDetails" class="btn btn-primary">Enter Your Info</button>    
+                    <button type="button" id="nextBtn1" class="btn btn-primary hiddenbutton">Next</button>
                 </div> 
 
                 <!--workout goals - form section two-->

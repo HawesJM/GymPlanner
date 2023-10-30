@@ -3,8 +3,7 @@
 const form = document.getElementById("details-form");
 form.addEventListener("submit", getUserDetails);
 
-document.getElementById("nextBtn1").addEventListener("click", validateEmail);
-document.getElementById("nextBtn1").addEventListener("click", validateName);
+document.getElementById("userDetails").addEventListener("click", validateUserInfo);
 document.getElementById("nextBtn4").addEventListener("click", validateHeight);
 document.getElementById("nextBtn4").addEventListener("click", validateWeight);
 document.getElementById("form-submit").addEventListener("click", dateTime);
@@ -83,7 +82,7 @@ $(document).ready(function () {
 
 // form page 1 progress function
 
-$("#nextBtn1").click(function () {
+$("#nextBtn1").click(function () {    
     $("#personal-info").slideUp("fast");
     $("#workoutinfo").removeClass("workout-info-next");
     steps[1].style.background = "turquoise";
@@ -342,22 +341,29 @@ function dateTime() {
 
 // validate form functions
 
-function validateEmail() {
+function validateUserInfo() {
     let x = document.getElementById("inputEmail").value;
     console.log(x);
     if (x == "") {
-        alert("your email address must be entered to proceed correctly, refresh to enter");
-        return false;
+        alert("your name and email address must be entered to proceed");
+        return false}
+    else {
+        x = "validatedEmail"
+    };
+
+    let y = document.getElementById("inputName").value;
+    console.log(y);
+    if (y == "") {
+        alert("your name must be entered to proceed");
+        return false}
+    else {
+        y = "validatedName"
+    };        
+    if ("validatedName" && "validatedEmail") {
+         $("#nextBtn1").removeClass("hiddenbutton");
+         $("#userDetails").addClass("hiddenbutton");
     }
-}
-function validateName() {
-    let x = document.getElementById("inputName").value;
-    console.log(x);
-    if (x == "") {
-        alert("your name must be entered to proceed correctly, refresh to enter");
-        return false;
-    }
-}
+}    
 
 function validateHeight() {
     let x = document.getElementById("inputHeight").value;
