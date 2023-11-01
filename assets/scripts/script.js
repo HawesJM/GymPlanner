@@ -4,8 +4,7 @@ const form = document.getElementById("details-form");
 form.addEventListener("submit", getUserDetails);
 
 document.getElementById("userDetails").addEventListener("click", validateUserInfo);
-document.getElementById("nextBtn4").addEventListener("click", validateHeight);
-document.getElementById("nextBtn4").addEventListener("click", validateWeight);
+document.getElementById("userBmi").addEventListener("click", validateBmi);
 document.getElementById("form-submit").addEventListener("click", dateTime);
 
 const steps = document.getElementsByClassName("step");
@@ -82,7 +81,7 @@ $(document).ready(function () {
 
 // form page 1 progress function
 
-$("#nextBtn1").click(function () {    
+$("#nextBtn1").click(function () {
     $("#personal-info").slideUp("fast");
     $("#workoutinfo").removeClass("workout-info-next");
     steps[1].style.background = "turquoise";
@@ -346,39 +345,49 @@ function validateUserInfo() {
     console.log(x);
     if (x == "") {
         alert("your name and email address must be entered to proceed");
-        return false}
+        return false;
+    }
     else {
-        x = "validatedEmail"
+        x = "validatedEmail";
     };
 
     let y = document.getElementById("inputName").value;
     console.log(y);
     if (y == "") {
-        alert("your name must be entered to proceed");
-        return false}
+        alert("your name and email address must be entered to proceed");
+        return false;
+    }
     else {
-        y = "validatedName"
-    };        
+        y = "validatedName";
+    };
     if ("validatedName" && "validatedEmail") {
-         $("#nextBtn1").removeClass("hiddenbutton");
-         $("#userDetails").addClass("hiddenbutton");
+        $("#nextBtn1").removeClass("hiddenbutton");
+        $("#userDetails").addClass("hiddenbutton");
     }
-}    
+};
 
-function validateHeight() {
+function validateBmi() {
     let x = document.getElementById("inputHeight").value;
     console.log(x);
     if (x == "") {
-        alert("your height must be entered to proceed correctly, refresh to enter");
+        alert("your height and weight must be entered to proceed");
         return false;
     }
-}
+    else {
+        x = "validatedHeight";
+    };
 
-function validateWeight() {
-    let x = document.getElementById("inputHeight").value;
-    console.log(x);
-    if (x == "") {
-        alert("your weight must be entered to proceed correctly, refresh to enter");
+    let y = document.getElementById("inputWeight").value;
+    console.log(y);
+    if (y == "") {
+        alert("your height and weight must be entered to proceed");
         return false;
     }
-}
+    else {
+        y = "validatedWeight";
+    };
+    if ("validatedHeight" && "validatedWeight") {
+        $("#nextBtn4").removeClass("hiddenbutton");
+        $("#userBmi").addClass("hiddenbutton");
+    }
+};
