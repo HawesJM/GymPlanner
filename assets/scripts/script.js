@@ -67,6 +67,14 @@ let ninetyOneTwentyPlan = {
 
 let workoutSpecifics = "";
 
+let validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+
+// stop form being submitted on enter keypress
+
+$(document).on("keydown", "form", function (event) {
+    return event.key != "Enter";
+});
+
 // initialise form function
 
 $(document).ready(function () {
@@ -148,7 +156,9 @@ function getUserDetails(event) {
     bmi = (userData.weight / (userData.height * userData.height) * 10000);
     console.log(bmi);
     console.log(userData.workout_length);
+
     // to build specific workout plan based on selections and input
+
     if (document.getElementById("gym30").checked === true && bmi > 25) {
         workoutSpecifics = thirtySixtyPlan.thirtySixtyPlanATimings;
         console.log("plan30");
@@ -360,10 +370,20 @@ function validateUserInfo() {
     else {
         y = "validatedName";
     };
+
     if ("validatedName" && "validatedEmail") {
-        $("#nextBtn1").removeClass("hiddenbutton");
-        $("#userDetails").addClass("hiddenbutton");
-    }
+        if (inputEmail.value.match(validRegex)) {
+            $("#nextBtn1").removeClass("hiddenbutton");
+            $("#userDetails").addClass("hiddenbutton");
+        }
+        else {
+            alert("Invalid email address!");
+
+            document.form1.text1.focus();
+
+            return false;
+        }
+    };
 };
 
 function validateBmi() {
@@ -391,3 +411,38 @@ function validateBmi() {
         $("#userBmi").addClass("hiddenbutton");
     }
 };
+
+// get workout plan example function
+
+let allCardio = workout.lose_weight.cardio_workouts.concat(workout.build_muscle.cardio_workouts, workout.stretch.cardio_workouts);
+console.log(allCardio);
+allCardioExample = [];
+
+for (let i = 0; i < allCardio.length; i++) {
+    cardioCurrent = allCardio[i];
+    allCardioExample.push(cardioCurrent);
+};
+
+console.log(allCardioExample);
+
+// print workout plan example function excluding duplicates
+
+
+let cardioExample = [];
+
+for (let i = 0; i < allCardioExample.length; i++) {
+    if (cardioExample.indexOf(allCardioExample[i]) === -1) {
+        cardioExample.push(allCardioExample[i]);
+    }
+};
+
+// print workout plan example function excluding pipe symbol
+
+let cardioExampleString = cardioExample.toString();
+
+console.log(cardioExampleString);
+
+let cardioExampleStringFinal = cardioExampleString.split("|").join("");
+
+console.log(cardioExampleStringFinal);
+
