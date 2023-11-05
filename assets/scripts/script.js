@@ -97,7 +97,7 @@ $("#nextBtn1").click(function () {
 
 // form page 2 progress function
 
-$(".workout-type-form").click(function () {
+$(".workout-type-form").change(function () {
     $("#nextBtn2").removeClass("hiddenbutton");
 });
 
@@ -109,7 +109,7 @@ $("#nextBtn2").click(function () {
 
 // form page 3 progress function
 
-$("#membership-status").click(function () {
+$("#membership-status").change(function () {
     $("#nextBtn3").removeClass("hiddenbutton");
 });
 
