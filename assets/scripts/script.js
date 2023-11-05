@@ -46,10 +46,6 @@ let nouns = [
     " Tiger", " Dragon", " Leopard", " Rhino", " Eagle", " Wolf", " Cobra", " Gazelle"
 ];
 
-userVerb = "";
-
-userNoun = "";
-
 let thirtySixtyPlan = {
     "thirtySixtyPlanATimings": "per workout session; perform one or two of your preferred primary exercise types with either a five minute cooldown or a ten minute break in between",
     "thirtySixtyPlanBTimings": "per workout session; perform one of your preferred primary exercise types with a complete set one of your preferred secondary workout types"

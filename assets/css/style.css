@@ -260,6 +260,16 @@ input[type="radio"]:checked {
     text-decoration: none;
 }
 
+/* 404 page styles */
+
+#file_not_found {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
 /* media queries */
 
 @media (max-width: 540px) {
