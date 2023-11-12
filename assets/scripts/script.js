@@ -125,7 +125,7 @@ $("#nextBtn4").click(function () {
 
 // form page 5 progress function
 
-$("#times").click(function () {
+$("#times").change(function () {
     $("#form-submit-button").removeClass("hiddenbutton");
 });
 
