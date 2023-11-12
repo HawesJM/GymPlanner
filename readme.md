@@ -31,13 +31,13 @@ The live website can be found here
 
 ##### Architecture
 
-Gym Spotter is built using pure HTML5 and CSS according to the principles of creating a responsive and accessible static front-end user-centric website. Bootstrap and media queries were also used to ensure responsive design.
+Gym Planner is built using HTML5, CSS and JavaScript according to the principles of creating a responsive and interactive front-end user-centric website. Bootstrap and media queries were also used to ensure responsive design, and occasionally the jQuery library is used. 
 
 ![alt text](assets/images/mock-up-image.png)
 
 ##### User Experience Design
 
-For fist time visitors I imagined the user wanting to quickly and easily develop and retrieve a personalised workout plan tailored to them and their needs, without overwhelming information or overly complex data input. For frequent and returning users I wanted offer a basic framework where they can set and improve on their own exercise goals, and monitor their personal performance against certain external standards that regular gym goers would be already aware of. In both cases I wanted clear and easily navigable content on desktop, tablet and also mobile device so users can effectively set their goals and monitor their progress while working out or while taking some rest in their downtime.
+For fist time visitors I imagined the user wanting to quickly and easily develop and retrieve a personalised workout plan tailored to them and their needs, without overwhelming information or overly complex data input. For frequent and returning users I wanted offer to a basic framework with which they can set and improve on their own exercise goals, and monitor their personal performance against certain external standards that regular gym goers would be already aware of. In both cases I wanted clear and easily navigable content on desktop, tablet and also mobile device so users can effectively set their goals and monitor their progress while working out or while taking some rest in their downtime.
 
 ##### Navigation
 
@@ -47,4 +47,14 @@ There will be one main page with a header including logo, title and navigation l
 
 ##### Colour Scheme
 
-Over a paper white background the homepage will show a main section and form container using Orange #ED6B47 .  This will contain the main CTA button using Navy Blue #112A46 with a Grey #999 box shadow for contrast. Turquoise #7df9ffb3 and Orange #ED6B47 are used as accent colours for buttons/progress bars and in hover instances to give feedback to the user. White #fafafa is used for text over button and form progress steps for clarity and contrast.
+Over a paper white background the homepage will show a main section and form container using Orange #ED6B47 .  This will contain the main CTA button using Navy Blue #112A46 with a Grey #999 box shadow for contrast. Turquoise #7df9ffb3 and Orange #ED6B47 are used as accent colours for buttons/progress bars and in hover instances to give feedback to the user. White #fafafa is used for text over buttons and form progress steps for clarity and contrast.
+
+##### Typography
+
+The main font used is Teko to enhance the modern industrial feel of the website with provision for using Roboto when this is necessary for further clarity.
+
+##### Imagery
+
+The Gym Planner logo is displayed in the header or footer of all pages, and on all devices and screensizes. The exact placement, positioning and sizing of the logo will change depending on the screen size. The website also displays images for general motivation or to help clarify specific sections of information.
+
+##### Wireframes

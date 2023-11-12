@@ -1,4 +1,4 @@
-// global variables and event listeners
+// initial global variables and event listeners
 
 const form = document.getElementById("details-form");
 form.addEventListener("submit", getUserDetails);
@@ -67,10 +67,6 @@ let validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9
 
 const card = document.getElementById("card");
 card.addEventListener("click", flipCard);
-
-function flipCard() {
-    card.classList.toggle("flipCard");
-}
 
 // stop form being submitted on enter keypress
 
@@ -449,3 +445,9 @@ let cardioExampleStringFinal = cardioExampleString.split("|").join("");
 
 console.log(cardioExampleStringFinal);
 
+
+// final cosmetic functions for results
+
+function flipCard() {
+    card.classList.toggle("flipCard");
+}

@@ -11,12 +11,14 @@ body {
     font-family: "teko", sans-serif;
     font-weight: 500;
     font-size: 24px;
+    text-align: center;
 }
 
 
 .navbar-brand {
     margin-right: 0px;
 }
+
 
 h1 {
     font-family: "teko", sans-serif;
@@ -283,7 +285,7 @@ input[type="radio"]:checked {
     height: 100%;
     font-family: "teko", sans-serif;
     font-weight: 300;
-    font-size: 24px;
+    font-size: 22px;
     color: #fafafa;
     background-color: #ED6B47;
     text-decoration: none;
@@ -316,7 +318,7 @@ input[type="radio"]:checked {
     }
 
     h1 {
-        font-size: 18px;
+        font-size: 24px;
     }
 
     #header-div {
@@ -330,7 +332,11 @@ input[type="radio"]:checked {
         margin: auto;
     }
 
-    #text-box-about {
+    .text-container {
+        text-align: center;
+    }
+
+    .text-box {
         width: 100%;
         border-style: solid;
         border-color: #ED6B47;
@@ -340,6 +346,11 @@ input[type="radio"]:checked {
     #footer-section {
         position: relative;
     }
+
+    .nav-link {
+        font-style: italic;
+    }
+
 }
 
 @media (max-width: 1200px) {
@@ -367,5 +378,17 @@ input[type="radio"]:checked {
 
     h2 {
         font-size: 18px;
+    }
+}
+
+@media (min-width: 541px) {
+    .nav-left {
+        border-right: 1.5px solid #43464b;
+    }
+}
+
+@media (max-width: 1365px) {
+    #footer-section {
+        position: relative;
     }
 }
