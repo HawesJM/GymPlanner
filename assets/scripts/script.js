@@ -65,6 +65,13 @@ let workoutSpecifics = "";
 
 let validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 
+const card = document.getElementById("card");
+card.addEventListener("click", flipCard);
+
+function flipCard() {
+    card.classList.toggle("flipCard");
+}
+
 // stop form being submitted on enter keypress
 
 $(document).on("keydown", "form", function (event) {

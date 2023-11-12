@@ -234,6 +234,39 @@ input[type="radio"]:checked {
     color: #fafafa;
 }
 
+.card {
+    transform-style: preserve-3d;
+    transition: all 08s ease;
+}
+
+.front {
+    backface-visibility: hidden;
+    color: #43464b;
+    max-width: 100%;
+    width: fit-content;
+    text-align: center;
+    font-family: "teko", sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+}
+
+.back {
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    background-color: #43464b;
+    max-width: 100%;
+    width: fit-content;
+    text-align: center;
+    font-family: "teko", sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    color: #fafafa;
+}
+
+.flipCard {
+    transform: rotateY(180deg);
+}
+
 #footer-logo {
     display: none;
 }
