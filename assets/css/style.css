@@ -225,6 +225,7 @@ input[type="radio"]:checked {
     background-color: #43464b;
     margin: auto;
     max-width: 80%;
+    max-height: 80%;
     width: fit-content;
     text-align: center;
     margin-top: 25px;
@@ -265,6 +266,10 @@ input[type="radio"]:checked {
 
 .flipCard {
     transform: rotateY(180deg);
+}
+
+.table {
+    margin-bottom: 0px;
 }
 
 #footer-logo {
@@ -330,6 +335,10 @@ input[type="radio"]:checked {
         border-style: solid;
         border-color: #ED6B47;
         font-size: 18px;
+    }
+
+    #footer-section {
+        position: relative;
     }
 }
 
