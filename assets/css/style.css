@@ -300,6 +300,16 @@ input[type="radio"]:checked {
     text-decoration: none;
 }
 
+#get-started-link {
+    font-weight: 500;
+    color: #ED6B47;
+}
+
+#get-started-link:hover {
+    background-color: #fafafa;
+    color: #112A46;
+}
+
 /* 404 page styles */
 
 #file_not_found {
