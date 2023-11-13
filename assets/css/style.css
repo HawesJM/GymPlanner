@@ -387,7 +387,7 @@ input[type="radio"]:checked {
     }
 }
 
-@media (max-width: 1365px) {
+@media (max-width: 1517px) {
     #footer-section {
         position: relative;
     }
