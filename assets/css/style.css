@@ -294,6 +294,10 @@ input[type="radio"]:checked {
     text-decoration: none;
 }
 
+ul {
+    padding: 0;
+}
+
 .text-box {
     padding: 15px;
     width: 50%;
@@ -301,6 +305,10 @@ input[type="radio"]:checked {
     background-color: #112A46;
     text-align: center;
     text-decoration: none;
+}
+
+.text-box li {
+    text-align: center;
 }
 
 #get-started-link {
@@ -312,6 +320,24 @@ input[type="radio"]:checked {
     background-color: #fafafa;
     color: #112A46;
 }
+
+#cardio-example-span {
+    font-style: italic;
+}
+
+#cardio-example-span:hover {
+    background-color: #ED6B47;
+}
+
+#about-cardio-example {
+    text-align: center;
+    font-weight: 500;
+}
+
+.about-cardio-hidden {
+    display: none;
+}
+
 
 /* 404 page styles */
 
@@ -383,6 +409,7 @@ input[type="radio"]:checked {
         width: 100%;
         border-style: solid;
         border-color: #ED6B47;
+        font-size: 16px;
     }
 
     #text-box-faq {

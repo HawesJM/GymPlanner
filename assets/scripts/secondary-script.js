@@ -24,6 +24,10 @@ let workout = {
     }
 };
 
+// event listeners
+
+document.getElementById("cardio-example-span").addEventListener("click", showCardioExample);
+
 // get workout plan example function
 
 let allCardio = workout.lose_weight.cardio_workouts.concat(workout.build_muscle.cardio_workouts, workout.stretch.cardio_workouts);
@@ -58,4 +62,8 @@ let cardioExampleStringFinal = cardioExampleString.split("|").join("");
 
 console.log(cardioExampleStringFinal);
 
-document.getElementById("cardio-example").innerHTML += cardioExampleStringFinal + ".";
+function showCardioExample() {
+    document.getElementById("about-cardio-example").innerHTML += "<hr>" + "Cardio Examples:" + "<br>" + cardioExampleStringFinal + ".";
+    document.getElementById("about-cardio-example").classList.remove("about-cardio-hidden");
+    document.getElementById("cardio-example-span").classList.add("about-cardio-hidden");
+};
