@@ -138,8 +138,6 @@ $("#refresh-button").click(function () {
     window.location.reload();
 });
 
-// function to display active form steps
-
 // get user data function
 
 function getUserDetails(event) {
@@ -314,7 +312,7 @@ function balanceAndFlexibility() {
     }
 }
 
-// plan name generator function
+// plan name and emblem generator function
 
 function generate() {
     userVerb = verbs[
@@ -325,9 +323,33 @@ function generate() {
     console.log(userNoun);
     let planNick = userVerb + userNoun;
     document.getElementById("plan_heading").innerHTML += planNick;
+    if (userNoun.includes("Tiger")) {
+        document.getElementById("card-header-logo").src += "assets/images/tiger.png";
+    }
+    else if (userNoun.includes("Dragon")) {
+        document.getElementById("card-header-logo").src += "assets/images/dragon.png";
+    } else if (userNoun.includes("Leopard")) {
+        document.getElementById("card-header-logo").src += "assets/images/leopard.png";
+    }
+    else if (userNoun.includes("Rhino")) {
+        document.getElementById("card-header-logo").src += "assets/images/rhino.png";
+    }
+    else if (userNoun.includes("Eagle")) {
+        document.getElementById("card-header-logo").src += "assets/images/eagle.png";
+    }
+    else if (userNoun.includes("Wolf")) {
+        document.getElementById("card-header-logo").src += "assets/images/wolf.png";
+    }
+    else if (userNoun.includes("Cobra")) {
+        document.getElementById("card-header-logo").src += "assets/images/cobra.png";
+    }
+    else if (userNoun.includes("Gazelle")) {
+        document.getElementById("card-header-logo").src += "assets/images/gazelle.png";
+    }
 }
 
 // additional resources based on gym access function
+
 function resources() {
     if (document.getElementById("gymno").checked === true) {
         let externalResource = '<a href="https://www.forbes.com/health/fitness/best-online-workout-programs/" target ="_blank">A Guide To Home Workouts</a>';
@@ -410,41 +432,6 @@ function validateBmi() {
         $("#userBmi").addClass("hiddenbutton");
     }
 };
-
-// get workout plan example function
-
-let allCardio = workout.lose_weight.cardio_workouts.concat(workout.build_muscle.cardio_workouts, workout.stretch.cardio_workouts);
-console.log(allCardio);
-allCardioExample = [];
-
-for (let i = 0; i < allCardio.length; i++) {
-    cardioCurrent = allCardio[i];
-    allCardioExample.push(cardioCurrent);
-};
-
-console.log(allCardioExample);
-
-// print workout plan example function excluding duplicates
-
-
-let cardioExample = [];
-
-for (let i = 0; i < allCardioExample.length; i++) {
-    if (cardioExample.indexOf(allCardioExample[i]) === -1) {
-        cardioExample.push(allCardioExample[i]);
-    }
-};
-
-// print workout plan example function excluding pipe symbol
-
-let cardioExampleString = cardioExample.toString();
-
-console.log(cardioExampleString);
-
-let cardioExampleStringFinal = cardioExampleString.split("|").join("");
-
-console.log(cardioExampleStringFinal);
-
 
 // final cosmetic functions for results
 

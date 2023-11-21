@@ -245,6 +245,20 @@ input[type="radio"]:checked {
     transition: all 08s ease;
 }
 
+#card img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#card-header-logo {
+    padding: 0;
+    margin: 0;
+    height: 45%;
+    width: 35%;
+}
+
 .front {
     backface-visibility: hidden;
     color: #43464b;
