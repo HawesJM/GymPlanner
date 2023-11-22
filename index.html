@@ -24,7 +24,7 @@
         <nav class="navbar navbar-expand-sm navbar-light container-fluid flex-column">
             <div class="d-flex flex-column container-fluid justify-content-between align-items-center">
                 <a class="navbar-brand navbar-logo" href="index.html">
-                    <img id = "header-logo" src="assets/images/gymplannerlogo.jpg" alt="Gym Planner Logo" class = "center" />
+                    <img id = "header-logo" src="assets/images/gym-planner-logo.jpg" alt="Gym Planner Logo" class = "center" />
                 </a>
                 <div class="title-text">
                     <h1>Your Tailored Exercise Planner</h1>
@@ -116,11 +116,11 @@
                 <!--workout lengths - form section five-->
                 <div id="times" class="mb3 times-hidden"><h3>Your usual/preferred workout length</h3>
                     <br>
-                    <input type="radio" name="gymtime" id="gym30" value="30-60minutes"> 30-60 minutes</input>
+                    <input type="radio" name="gymtime" id="gym30" value="30-60minutes"> <label for = "gym30">30-60 minutes</label></input>
                     <br>
-                    <input type="radio" name="gymtime" id="gym60" value="60-90minutes"> 60-90 minutes</input>
+                    <input type="radio" name="gymtime" id="gym60" value="60-90minutes"> <label for = "gym60">60-90 minutes</label></input>
                     <br>
-                    <input type="radio" name="gymtime" id="gym90" value="90-120minutes"> 90-120 minutes</input>
+                    <input type="radio" name="gymtime" id="gym90" value="90-120minutes"> <label for = "gym90">90-120 minutes</label></input>
                     <br>
                 </div>
 
@@ -147,6 +147,7 @@
         <!-- specifically generated workout plan in table format -->
         <div id="results-container" class="results-shown results-hidden">
             <div id ="card" class = "card">
+                <h4 id = "card-header">Click To Reveal Your Workout Plan</h4>
                 <img alt="Gym Planner Emblem" id="card-header-logo">
                     <div class="back">
                         <div class="front">
@@ -258,7 +259,7 @@
                     © 2023 Copyright:
                     <a class="text-dark" href="index.html">Gym Planner</a>
                 </div>
-                <img id="footer-logo" src="assets/images/gymplannerlogo.jpg" alt="Gym Planner Logo" />
+                <img id="footer-logo" src="assets/images/gym-planner-logo.jpg" alt="Gym Planner Logo" />
         </footer>
 
     <!-- Scripts -->

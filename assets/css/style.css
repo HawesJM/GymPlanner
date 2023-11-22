@@ -45,13 +45,6 @@ h3 {
     text-decoration: underline;
 }
 
-h4 {
-    font-family: "teko", sans-serif;
-    font-weight: 300;
-    font-size: 20px;
-    font-style: italic;
-}
-
 #footer-section {
     position: fixed;
     left: 0;
@@ -242,7 +235,7 @@ input[type="radio"]:checked {
 
 .card {
     transform-style: preserve-3d;
-    transition: all 08s ease;
+    transition: all 04s ease;
 }
 
 #card img {
@@ -250,6 +243,21 @@ input[type="radio"]:checked {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+}
+
+#card-header {
+    padding-top: 20px;
+    padding-bottom: 0;
+    backface-visibility: hidden;
+    font-style: none;
+    font-size: 24px;
+    font-weight: 800;
+    font-family: "teko", sans-serif;
+    color: #112A46;
+}
+
+#card-header:hover {
+    text-shadow: #ED6B47 1px 0 10px;
 }
 
 #card-header-logo {
