@@ -437,4 +437,5 @@ function validateBmi() {
 
 function flipCard() {
     card.classList.toggle("flipCard");
+    $("#card-header").addClass("hiddenbutton");
 }
