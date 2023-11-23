@@ -185,7 +185,7 @@ function getUserDetails(event) {
         workoutSpecifics = ninetyOneTwentyPlan.ninetyOneTwentyPlanBTimings;
         console.log("specialsausagesausage");
     }
-};
+}
 
 
 // hide submitted form function
@@ -405,7 +405,7 @@ function validateUserInfo() {
             return false;
         }
     };
-};
+}
 
 function validateBmi() {
     let x = document.getElementById("inputHeight").value;
@@ -431,7 +431,7 @@ function validateBmi() {
         $("#nextBtn4").removeClass("hiddenbutton");
         $("#userBmi").addClass("hiddenbutton");
     }
-};
+}
 
 // final cosmetic functions for results
 
