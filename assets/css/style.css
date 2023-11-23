@@ -233,10 +233,14 @@ input[type="radio"]:checked {
     color: #fafafa;
 }
 
+/* flipcard code with help from code posted by Jeff Cuartas begin */
+
 .card {
     transform-style: preserve-3d;
     transition: all 04s ease;
 }
+
+/* flipcard code with help from code posted by Jeff Cuartas end */
 
 #card img {
     position: absolute;
@@ -254,7 +258,10 @@ input[type="radio"]:checked {
     font-weight: 800;
     font-family: "teko", sans-serif;
     color: #112A46;
+    opacity: 0;
     animation: fadeIn 10s;
+    animation-delay: 3s;
+    animation-iteration-count: infinite;
 }
 
 @keyframes fadeIn {
@@ -302,9 +309,13 @@ input[type="radio"]:checked {
     color: #fafafa;
 }
 
+/* flipcard code with help from code posted by Jeff Cuartas begin */
+
 .flipCard {
     transform: rotateY(180deg);
 }
+
+/* flipcard code with help from code posted by Jeff Cuartas end */
 
 .table {
     margin-bottom: 0px;

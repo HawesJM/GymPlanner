@@ -24,7 +24,8 @@
         <nav class="navbar navbar-expand-sm navbar-light container-fluid flex-column">
             <div class="d-flex flex-column container-fluid justify-content-between align-items-center">
                 <a class="navbar-brand navbar-logo" href="index.html">
-                    <img id = "header-logo" src="assets/images/gym-planner-logo.jpg" alt="Gym Planner Logo" class = "center" />
+                    <img id="header-logo" src="assets/images/gym-planner-logo.jpg" alt="Gym Planner Logo"
+                        class="center" />
                 </a>
                 <div class="title-text">
                     <h1>Your Tailored Exercise Planner</h1>
@@ -50,117 +51,138 @@
     </header>
 
     <!--main section - form -->
-    
-<main>
-    <div id="form-background">    
-        <div id="form-container">
-            <div id="button-container" class="mx-auto">
-                <button class="btn btn-primary" id="start-button">
-                    <h2>Build Your Workout</h2>
-                </button>
+
+    <main>
+        <div id="form-background">
+            <div id="form-container">
+                <div id="button-container" class="mx-auto">
+                    <button class="btn btn-primary" id="start-button">
+                        <h2>Build Your Workout</h2>
+                    </button>
+                </div>
+                <form id="details-form" action="/workspaces/GymPlanner/index.html" method=post>
+                    <div id="form-div" class="mx-auto">
+
+                        <!--personal info - form section one-->
+
+                        <div id="personal-info">
+                            <div class="mb1">
+                                <label for="inputName" class="form-label">
+                                    <h3>Name</h3>
+                                </label>
+                                <input type="text" class="form-control" id="inputName" required
+                                    aria-describedby="usernameinput">
+                            </div>
+                            <div class="mb-1">
+                                <label for="inputEmail" class="form-label">
+                                    <h3>Email Address</h3>
+                                </label>
+                                <input type="email" class="form-control" id="inputEmail" aria-describedby="emailinput">
+                            </div>
+                            <button type="button" id="userDetails" class="btn btn-primary">Enter Your Info</button>
+                            <button type="button" id="nextBtn1" class="btn btn-primary hiddenbutton">Next</button>
+                        </div>
+
+                        <!--workout goals - form section two-->
+
+                        <div id="workoutinfo" class="workout-info-next form-group col-sm-6 mx-auto">
+                            <h3> Workout Goals </h3>
+                            <br>
+                            <input type="radio" name="workout-type" class="workout-type-form" id="gym1"
+                                value="Endurance & Fitness"> <label for="gym1">Endurance & Fitness </label>
+                            |</input> <i class="fa-solid fa-stopwatch-20 fa-lg workout-icon"></i><br>
+                            <input type="radio" name="workout-type" class="workout-type-form" id="gym2"
+                                value="Strength & Sculpture"><label for="gym2">Strength & Sculpture</label> 
+                            |</input> <i class="fa-solid fa-dumbbell fa-lg workout-icon"></i><br>
+                            <input type="radio" name="workout-type" class="workout-type-form" id="gym3"
+                                value="Balance & Flexibility"> <label for="gym3">Balance & Flexibility</label>
+                            |</input> <i class="fa-solid fa-yin-yang fa-lg workout-icon"></i><br>
+                            <br>
+                            <button type="button" id="nextBtn2" class="hiddenbutton btn btn-primary">Next</button>
+                        </div>
+
+                        <!--gym access - form section three-->
+
+                        <div id="membership-status" class="membership-status-hidden">
+                            <h3>Do you have acces to a gym?</h3>
+                            <br>
+                            <input type="radio" name="gymaccess" id="gymyes" value="yes"><label for="gymyes">Yes</label></input>
+                            <input type="radio" name="gymaccess" id="gymno" value="no">No</input>
+                            <br>
+                            <button type="button" id="nextBtn3"
+                                class="hiddenbutton btn btn-primary next-btn">Next</button>
+                        </div>
+
+                        <!--vital statistics - form section four-->
+
+                        <div id="stats" class="mb3 stats-hidden">
+                            <label for="inputHeight" class="form-label">
+                                <h3>Height (cm)</h3>
+                            </label>
+                            <input type="text" class="form-control" id="inputHeight" aria-describedby="heightinput">
+                            <label for="inputWeight" class="form-label">
+                                <h3>Weight (KGs)</h3>
+                            </label>
+                            <input type="text" class="form-control" id="inputWeight" aria-describedby="weightinput">
+                            <button type="button" id="userBmi" class="btn btn-primary">Enter Your Info</button>
+                            <button type="button" id="nextBtn4"
+                                class="btn btn-primary next-btn hiddenbutton">Next</button>
+                        </div>
+
+                        <!--workout lengths - form section five-->
+                        <div id="times" class="mb3 times-hidden">
+                            <h3>Your usual/preferred workout length</h3>
+                            <br>
+                            <input type="radio" name="gymtime" id="gym30" value="30-60minutes"> <label for="gym30">30-60
+                                minutes</label></input>
+                            <br>
+                            <input type="radio" name="gymtime" id="gym60" value="60-90minutes"> <label for="gym60">60-90
+                                minutes</label></input>
+                            <br>
+                            <input type="radio" name="gymtime" id="gym90" value="90-120minutes"> <label
+                                for="gym90">90-120 minutes</label></input>
+                            <br>
+                        </div>
+
+                        <!--form submit button-->
+
+                        <div id="form-submit-button" class="hiddenbutton">
+                            <button id="form-submit" type="submit" class="btn btn-primary">Submit</button>
+                        </div>
+                    </div>
+
+                </form>
             </div>
-            <form id="details-form" action = "/workspaces/GymPlanner/index.html" method = post>
-                <div id="form-div" class="mx-auto">
-
-                    <!--personal info - form section one-->
-
-                    <div id="personal-info">
-                        <div class="mb1">
-                            <label for="inputName" class="form-label"><h3>Name</h3></label>
-                            <input type="text" class="form-control" id="inputName" required aria-describedby="usernameinput">
-                        </div>
-                        <div class="mb-1">
-                        <label for="inputEmail" class="form-label"><h3>Email Address</h3></label>
-                        <input type="email" class="form-control" id="inputEmail" aria-describedby="emailinput">
-                        </div>
-                    <button type="button" id="userDetails" class="btn btn-primary">Enter Your Info</button>    
-                    <button type="button" id="nextBtn1" class="btn btn-primary hiddenbutton">Next</button>
-                </div> 
-
-                <!--workout goals - form section two-->
-                
-                <div id="workoutinfo" class="workout-info-next form-group col-sm-6 mx-auto">
-                    <h3> Workout Goals </h3>
-                    <br>
-                    <input type="radio" name="workout-type" class="workout-type-form" id="gym1" value="Endurance & Fitness"> Endurance & Fitness
-                    |</input> <i class="fa-solid fa-stopwatch-20 fa-lg workout-icon"></i><br>
-                    <input type="radio" name="workout-type" class="workout-type-form" id="gym2" value="Strength & Sculpture"> Strength & Sculpture
-                    |</input> <i class="fa-solid fa-dumbbell fa-lg workout-icon"></i><br>
-                    <input type="radio" name="workout-type" class="workout-type-form" id="gym3" value="Balance & Flexibility"> Balance & Flexibility
-                    |</input> <i class="fa-solid fa-yin-yang fa-lg workout-icon"></i><br>
-                    <br>
-                    <button type="button" id="nextBtn2" class="hiddenbutton btn btn-primary">Next</button>
-                </div>
-                
-                <!--gym access - form section three-->
-                
-                <div id="membership-status" class="membership-status-hidden"><h3>Do you have acces to a gym?</h3>
-                    <br>
-                    <input type="radio" name="gymaccess" id="gymyes" value="yes">Yes</input>
-                    <input type="radio" name="gymaccess" id="gymno" value="no">No</input>
-                    <br>
-                    <button type="button" id="nextBtn3" class="hiddenbutton btn btn-primary next-btn">Next</button>
-                </div>
-
-                <!--vital statistics - form section four-->
-
-                <div id="stats" class="mb3 stats-hidden">
-                    <label for="inputHeight" class="form-label"><h3>Height (cm)</h3></label>
-                    <input type="text" class="form-control" id="inputHeight" aria-describedby="heightinput">
-                    <label for="inputWeight" class="form-label"><h3>Weight (KGs)</h3></label>
-                    <input type="text" class="form-control" id="inputWeight" aria-describedby="weightinput">
-                    <button type="button" id="userBmi" class="btn btn-primary">Enter Your Info</button>
-                    <button type="button" id="nextBtn4" class="btn btn-primary next-btn hiddenbutton">Next</button>
-                </div>
-
-                <!--workout lengths - form section five-->
-                <div id="times" class="mb3 times-hidden"><h3>Your usual/preferred workout length</h3>
-                    <br>
-                    <input type="radio" name="gymtime" id="gym30" value="30-60minutes"> <label for = "gym30">30-60 minutes</label></input>
-                    <br>
-                    <input type="radio" name="gymtime" id="gym60" value="60-90minutes"> <label for = "gym60">60-90 minutes</label></input>
-                    <br>
-                    <input type="radio" name="gymtime" id="gym90" value="90-120minutes"> <label for = "gym90">90-120 minutes</label></input>
-                    <br>
-                </div>
-
-                <!--form submit button-->
-                
-                <div id = "form-submit-button" class="hiddenbutton">
-                    <button id= "form-submit" type="submit" class="btn btn-primary">Submit</button>
-                </div>
-                </div>
-
-            </form>
-        </div>
             <!-- Circles which indicate the steps of the form: -->
-            <div id = "form-progress" class="steps-hidden">
+            <div id="form-progress" class="steps-hidden">
                 <span class="step"></span>
                 <span class="step"></span>
                 <span class="step"></span>
                 <span class="step"></span>
                 <span class="step"></span>
                 <br>
-                <button id = "refresh-button" type="button" class="btn btn-primary"><h3>Refresh the form</h3><i class="fa-solid fa-arrows-rotate"></i></button>
+                <button id="refresh-button" type="button" class="btn btn-primary">
+                    <h3>Refresh the form</h3><i class="fa-solid fa-arrows-rotate"></i>
+                </button>
             </div>
 
-        <!-- specifically generated workout plan in table format -->
-        <div id="results-container" class="results-shown results-hidden">
-            <div id ="card" class = "card">
-                <h4 id = "card-header">Click To Reveal Your Workout Plan</h4>
-                <img alt="Gym Planner Emblem" id="card-header-logo">
+            <!-- specifically generated workout plan in table format -->
+            <div id="results-container" class="results-shown results-hidden">
+                <div id="card" class="card">
+                    <h4 id="card-header">Click To Reveal Your Workout Plan</h4>
+                    <img alt="Gym Planner Emblem" id="card-header-logo">
                     <div class="back">
                         <div class="front">
-                            <table id="results-table" class = "table table-striped">
+                            <table id="results-table" class="table table-striped">
                                 <thead>
                                     <tr>
-                                        <th colspan = "4">
-                                        Plan Date and Time
+                                        <th colspan="4">
+                                            Plan Date and Time
                                         </th>
                                     </tr>
                                     <tr>
-                                        <td colspan = "4" id = plan_date>
-                                    </td>
+                                        <td colspan="4" id=plan_date>
+                                        </td>
                                     </tr>
                                     <tr>
                                         <th>Name
@@ -181,14 +203,14 @@
                                         <td id="plan_number">
                                         </td>
                                     </tr>
-                                </thead>    
+                                </thead>
                                 <tbody>
                                     <tr>
                                         <th>Weekly Workout Frequency
                                         </th>
                                         <th>Primary Workout
                                         </th>
-                                        <th>Secondary Workout 
+                                        <th>Secondary Workout
                                         </th>
                                         <th>Extras
                                         </th>
@@ -202,15 +224,15 @@
                                         </td>
                                         <td id="additional">
                                         </td>
-                                    </tr>  
+                                    </tr>
                                     <tr>
-                                        <th colspan = "4">Session Specifics
+                                        <th colspan="4">Session Specifics
                                         </th>
-                                    </tr> 
+                                    </tr>
                                     <tr>
-                                        <td id="cardio_exercises" colspan = "4"></td>
-                                        </tr>
-                                        <tr>
+                                        <td id="cardio_exercises" colspan="4"></td>
+                                    </tr>
+                                    <tr>
                                         <td id="weights_exercises" colspan="4"></td>
                                     </tr>
                                     <tr>
@@ -220,47 +242,47 @@
                                         <td id="poses" colspan="4"></td>
                                     </tr>
                                     <tr>
-                                        <td id ="plan_specifics" colspan = "4"></td>
+                                        <td id="plan_specifics" colspan="4"></td>
                                     </tr>
                                     <tr>
-                                        <th colspan = 4> Additional Resources </th>
+                                        <th colspan=4> Additional Resources </th>
                                     </tr>
                                     <tr>
-                                        <td id ="resource_links" colspan = "4"></td>
+                                        <td id="resource_links" colspan="4"></td>
                                     </tr>
-                                </tbody>     
+                                </tbody>
                             </table>
                         </div>
-                    </div>    
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</main>
+        </div>
+    </main>
 
     <!-- Footer Section -->
 
-        <footer id="footer-section">
-            <div class="text-center text-white social-footer">
-                <div class="container pt-3">
-                    <div class="mb-3">
-                        <a class="btn btn-link btn-floating btn-lg text-dark m-1" aria-label="Facebook Link"
-                            href="https://www.facebook.com/" target="_blank" role="button"
-                            data-mdb-ripple-color="dark"><i class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-link btn-floating btn-lg text-dark m-1" aria-label="Twitter Link"
-                            href="https://twitter.com/" target="_href" role="button" data-mdb-ripple-color="dark"><i
-                                class="fab fa-twitter"></i></a>
-                        <a class="btn btn-link btn-floating btn-lg text-dark m-1" aria-label="Instagram Link"
-                            href="https://www.instagram.com/" target="_blank" role="button"
-                            data-mdb-ripple-color="dark"><i class="fab fa-instagram"></i></a>
-                    </div>
+    <footer id="footer-section">
+        <div class="text-center text-white social-footer">
+            <div class="container pt-3">
+                <div class="mb-3">
+                    <a class="btn btn-link btn-floating btn-lg text-dark m-1" aria-label="Facebook Link"
+                        href="https://www.facebook.com/" target="_blank" role="button" data-mdb-ripple-color="dark"><i
+                            class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-link btn-floating btn-lg text-dark m-1" aria-label="Twitter Link"
+                        href="https://twitter.com/" target="_href" role="button" data-mdb-ripple-color="dark"><i
+                            class="fab fa-twitter"></i></a>
+                    <a class="btn btn-link btn-floating btn-lg text-dark m-1" aria-label="Instagram Link"
+                        href="https://www.instagram.com/" target="_blank" role="button" data-mdb-ripple-color="dark"><i
+                            class="fab fa-instagram"></i></a>
                 </div>
-                <div class="text-center text-dark p-3 copy-div">
-                    © 2023 Copyright:
-                    <a class="text-dark" href="index.html">Gym Planner</a>
-                </div>
-                <img id="footer-logo" src="assets/images/gym-planner-logo.jpg" alt="Gym Planner Logo" />
-        </footer>
+            </div>
+            <div class="text-center text-dark p-3 copy-div">
+                © 2023 Copyright:
+                <a class="text-dark" href="index.html">Gym Planner</a>
+            </div>
+            <img id="footer-logo" src="assets/images/gym-planner-logo.jpg" alt="Gym Planner Logo" />
+    </footer>
 
     <!-- Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.min.js"
