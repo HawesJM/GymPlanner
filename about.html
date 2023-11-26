@@ -21,7 +21,7 @@
     />
     <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
     <title>Gym Planner</title>
-    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico" />
   </head>
 
   <body>
@@ -34,108 +34,140 @@
           class="d-flex flex-column container-fluid justify-content-between align-items-center"
         >
           <a class="navbar-brand navbar-logo" href="index.html">
-            <img id="header-logo"
+            <img
+              id="header-logo-about"
               src="assets/images/gym-planner-logo.jpg"
               alt="Gym Planner Logo"
             />
           </a>
-          <div class="title-text">
-            <h1>Your Tailored Exercise Planner</h1>
+          <button
+            class="navbar-toggler align-self-start"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="nav navbar-nav">
+              <li class="nav-item active">
+                <a class="nav-link nav-left" href="index.html"
+                  >Workout Builder</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html"
+                  >About Gym Planner<span class="sr-only">(current)</span></a
+                >
+              </li>
+            </ul>
           </div>
-          <div id="spacerbox"></div>
-        </div>
-        <button
-          class="navbar-toggler align-self-start"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="nav navbar-nav">
-            <li class="nav-item active">
-              <a class="nav-link nav-left" href="index.html"
-                >Home</span></a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link nav-left" href="about.html"
-                >About Gym Planner<span class="sr-only">(current)</span></a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="externalresources.html"
-                >External Resources</a
-              >
-            </li>
-          </ul>
         </div>
       </nav>
     </div>
 
     <main>
-    <!-- Introduction Text Box -->
-    <div class = "text-container flex-column">
-        <div id="text-box-about"  class="text-box" >
-            <h2>
-                Your Goals = Our Mission
-            </h2>
-        <p>
-            Welcome to gym planner, a web program that helps you build a reactive and reusable workout plan tailored to your specific needs, individual goals, and preferred way to workout.
-
-            Simply enter some basic information into the form on our homepage and our algorithm will do the rest. Your unique workout schematic is just a few clicks away! <a id = "get-started-link" target = "_blank" href="index.html">Get started here</a> or read on for further information.
-        </p>    
+      <!-- Introduction Text Box -->
+      <div class="text-container flex-column">
+        <div id="text-box-about" class="text-box">
+          <h2>Your Goals = Our Mission</h2>
+          <p>
+            Welcome to gym planner, a web program that helps you build a
+            reactive and reusable workout plan tailored to your specific needs,
+            individual goals, and preferred way to workout. Simply enter some
+            basic information into the form on our homepage and our algorithm
+            will do the rest. Your unique workout schematic is just a few clicks
+            away!
+            <a id="get-started-link" target="_blank" href="index.html"
+              >Get started here</a
+            >
+            or read on for further information.
+          </p>
         </div>
-    </div>
-    <div>
-    <div class="text-container flex-column" id="text-box-faq">
-            <div class="text-box">
-                <h2>Frequently Asked Questions</h2>
-                <ul style="list-style-type:none;">
-                    <li>"Do I need a gym membership to use gym spotter?"<br> No but we would advise that having access to gym
-                        facilities and equipment makes your plans more effective and rewarding</li><br>
-                    <li>"What sort of exercises does your planner include?"<br>Our planner focuses on the core pillars of regular workouts: strength and sculpture (weights and body building), balance and flexibility (stretching and yoga) and cardio and endurance (overall fitness). <span id="cardio-example-span"><br>Click here for an example</span><div id="about-cardio-example" class="about-cardio-hidden"></div></li>    
-                </ul>
-            </div>
-    </div>
-        
-    <div class="text-container flex-column" id="text-box-glossary">
-            <div class="text-box">
-                <h2>Glossary</h2>
-                <ul style="list-style-type:none;">
-                <li>"Endurance" : a category of exercise requiring a high level of stamina usually taking place over a long
-                    distance or time</li>
-                    <br>
-                </ul>
-            </div>
-    </div>
+      </div>
+      <div class="text-container flex-column" id="text-box-faq">
+        <div class="text-box">
+          <h2>Frequently Asked Questions</h2>
+          <ul style="list-style-type: none">
+            <li>
+              <p>"Do I need a gym membership to use gym spotter?"</p>
+              <p>
+                No but we would advise that having access to gym facilities and
+                equipment makes your plans more effective and rewarding
+              </p>
+            </li>
+            <li>
+              <p>"What sort of exercises does your planner include?"</p>
+              <p>
+                Ourplanner focuses on the core pillars of regular workouts:
+                strength and sculpture (weights and body building), balance and
+                flexibility (stretching and yoga) and cardio and endurance
+                (overall fitness)
+              </p>
+              <span id="cardio-example-span"
+                ><br />Click here for an example</span
+              >
+              <div id="about-cardio-example" class="about-cardio-hidden"></div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="text-container flex-column" id="text-box-glossary">
+        <div class="text-box">
+          <h2>Glossary</h2>
+          <ul style="list-style-type: none">
+            <li>
+              "Endurance" : a category of exercise requiring a high level of
+              stamina usually taking place over a long distance or time
+            </li>
+          </ul>
+        </div>
+      </div>
     </main>
 
     <!-- Footer Section -->
     <footer id="footer-section">
-        <div class="text-center text-white social-footer">
-            <div class="container pt-3">
-                <div class="mb-3">
-                    <a class="btn btn-link btn-floating btn-lg text-dark m-1" aria-label="Facebook Link"
-                        href="https://www.facebook.com/" target="_blank" role="button" data-mdb-ripple-color="dark"><i
-                        class="fab fa-facebook-f"></i></a>
-                    <a class="btn btn-link btn-floating btn-lg text-dark m-1" aria-label="Twitter Link"
-                        href="https://twitter.com/" target="_href" role="button" data-mdb-ripple-color="dark"><i
-                        class="fab fa-twitter"></i></a>
-                    <a class="btn btn-link btn-floating btn-lg text-dark m-1" aria-label="Instagram Link"
-                        href="https://www.instagram.com/" target="_blank" role="button" data-mdb-ripple-color="dark"><i
-                        class="fab fa-instagram"></i></a>
-                </div>
-            </div>
-            <div class="text-center text-dark p-3 copy-div">
-                © 2023 Copyright:
-                    <a class="text-dark" href="index.html">Gym Planner</a>
-            </div>
-            <img id="footer-logo" src="assets/images/gym-planner-logo.jpg" alt="Gym Planner Logo" />
+      <div class="text-center text-white social-footer flex-column">
+        <div class="container">
+          <div>
+            <a
+              class="btn btn-link btn-floating btn-lg text-dark m-1"
+              aria-label="Facebook Link"
+              href="https://www.facebook.com/"
+              target="_blank"
+              role="button"
+              data-mdb-ripple-color="dark"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+            <a
+              class="btn btn-link btn-floating btn-lg text-dark m-1"
+              aria-label="Twitter Link"
+              href="https://twitter.com/"
+              target="_blank"
+              role="button"
+              data-mdb-ripple-color="dark"
+              ><i class="fab fa-twitter"></i
+            ></a>
+            <a
+              class="btn btn-link btn-floating btn-lg text-dark m-1"
+              aria-label="Instagram Link"
+              href="https://www.instagram.com/"
+              target="_blank"
+              role="button"
+              data-mdb-ripple-color="dark"
+              ><i class="fab fa-instagram"></i
+            ></a>
+          </div>
+        </div>
+        <div class="text-center text-dark copy-div">
+          © 2023 Copyright:
+          <a class="text-dark" href="index.html">Gym Planner</a>
+        </div>
+      </div>
     </footer>
 
     <!-- Scripts -->
