@@ -325,27 +325,27 @@ function generate() {
     let planNick = userVerb + userNoun;
     document.getElementById("plan_heading").innerHTML += planNick;
     if (userNoun.includes("Tiger")) {
-        document.getElementById("card-header-logo").src += "assets/images/tiger.png";
+        document.getElementById("card-header-logo").src = "assets/images/tiger.png";
     }
     else if (userNoun.includes("Dragon")) {
-        document.getElementById("card-header-logo").src += "assets/images/dragon.png";
+        document.getElementById("card-header-logo").src = "assets/images/dragon.png";
     } else if (userNoun.includes("Leopard")) {
-        document.getElementById("card-header-logo").src += "assets/images/leopard.png";
+        document.getElementById("card-header-logo").src = "assets/images/leopard.png";
     }
     else if (userNoun.includes("Rhino")) {
-        document.getElementById("card-header-logo").src += "assets/images/rhino.png";
+        document.getElementById("card-header-logo").src = "assets/images/rhino.png";
     }
     else if (userNoun.includes("Eagle")) {
-        document.getElementById("card-header-logo").src += "assets/images/eagle.png";
+        document.getElementById("card-header-logo").src = "assets/images/eagle.png";
     }
     else if (userNoun.includes("Wolf")) {
-        document.getElementById("card-header-logo").src += "assets/images/wolf.png";
+        document.getElementById("card-header-logo").src = "assets/images/wolf.png";
     }
     else if (userNoun.includes("Cobra")) {
-        document.getElementById("card-header-logo").src += "assets/images/cobra.png";
+        document.getElementById("card-header-logo").src = "assets/images/cobra.png";
     }
     else if (userNoun.includes("Gazelle")) {
-        document.getElementById("card-header-logo").src += "assets/images/gazelle.png";
+        document.getElementById("card-header-logo").src = "assets/images/gazelle.png";
     }
 }
 

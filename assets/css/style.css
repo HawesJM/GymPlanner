@@ -29,7 +29,7 @@ h1 {
     color: #43464b;
 }
 
-#button-label {
+.button-label {
     font-family: "teko", sans-serif;
     font-weight: 500;
     font-size: 32px;
@@ -171,6 +171,7 @@ h3 {
 .btn-primary {
     background-color: #43464b;
     border: none;
+    font-family: "teko", "sans-serif";
 }
 
 .btn-primary:hover {
@@ -270,6 +271,15 @@ input[type="radio"]:checked {
     animation: fadeIn 10s;
     animation-delay: 3s;
     animation-iteration-count: infinite;
+}
+
+.back-link {
+    opacity: 0;
+    animation: fadeIn 13s;
+    animation-delay: 5s;
+    animation-iteration-count: infinite;
+    font-size: 14px;
+    backface-visibility: hidden;
 }
 
 @keyframes fadeIn {
@@ -417,6 +427,10 @@ ul {
         padding: 0;
     }
 
+    .button-label {
+        font-size: 18px;
+    }
+
     #header-div {
         font-size: 18px;
     }
@@ -483,14 +497,11 @@ ul {
         margin-bottom: 0;
     }
 
-    #refresh-button>p {
+    #refresh-button {
+        font-family: "teko", "sans-serif";
         font-size: 14px;
         margin: 0;
-        padding: 0;
-    }
-
-    #refresh-button>i {
-        display: none;
+        padding: 2px;
     }
 }
 
@@ -521,9 +532,6 @@ ul {
         padding: 0;
     }
 
-    #refresh-button>i {
-        display: none;
-    }
 }
 
 @media (min-width: 541px) {
