@@ -29,7 +29,7 @@ h1 {
     color: #43464b;
 }
 
-h2 {
+#button-label {
     font-family: "teko", sans-serif;
     font-weight: 500;
     font-size: 32px;
@@ -41,8 +41,10 @@ h3 {
     font-size: 24px;
 }
 
-#form-background h3 {
-    text-decoration: underline;
+#form-background label {
+    font-family: "teko", sans-serif;
+    font-weight: 500;
+    font-size: 24px;
 }
 
 #footer-section {
@@ -95,7 +97,7 @@ h3 {
 }
 
 #button-container {
-    width: 50%;
+    width: 25%;
     text-align: center;
 }
 
@@ -175,7 +177,7 @@ h3 {
     background-color: #ED6B47;
 }
 
-.hiddenbutton {
+.hidden-button {
     display: none;
 }
 
@@ -185,6 +187,12 @@ input[type="radio"]:checked {
 
 #form-submit-button {
     text-align: center;
+}
+
+#refresh-button p {
+    font-family: "teko", sans-serif;
+    font-weight: 500;
+    font-size: 18px;
 }
 
 /* form progress bar */
@@ -404,6 +412,11 @@ ul {
         font-size: 24px;
     }
 
+    #start-button {
+        max-width: 100%;
+        padding: 0;
+    }
+
     #header-div {
         font-size: 18px;
     }
@@ -457,8 +470,27 @@ ul {
         font-size: 18px;
     }
 
+    #start-button {
+        margin-top: 20%;
+        margin-bottom: 20%;
+    }
+
     h2 {
         font-size: 20px;
+    }
+
+    #refresh-button {
+        margin-bottom: 0;
+    }
+
+    #refresh-button>p {
+        font-size: 14px;
+        margin: 0;
+        padding: 0;
+    }
+
+    #refresh-button>i {
+        display: none;
     }
 }
 
@@ -477,6 +509,20 @@ ul {
 
     h2 {
         font-size: 18px;
+    }
+
+    #refresh-button {
+        margin-bottom: 0;
+    }
+
+    #refresh-button>p {
+        font-size: 14px;
+        margin: 0;
+        padding: 0;
+    }
+
+    #refresh-button>i {
+        display: none;
     }
 }
 

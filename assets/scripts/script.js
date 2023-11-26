@@ -6,6 +6,7 @@ form.addEventListener("submit", getUserDetails);
 document.getElementById("userDetails").addEventListener("click", validateUserInfo);
 document.getElementById("userBmi").addEventListener("click", validateBmi);
 document.getElementById("form-submit").addEventListener("click", dateTime);
+document.getElementById("form-submit").addEventListener("click", flipCardSpace);
 
 const steps = document.getElementsByClassName("step");
 
@@ -97,7 +98,7 @@ $("#nextBtn1").click(function () {
 // form page 2 progress function
 
 $(".workout-type-form").change(function () {
-    $("#nextBtn2").removeClass("hiddenbutton");
+    $("#nextBtn2").removeClass("hidden-button");
 });
 
 $("#nextBtn2").click(function () {
@@ -109,7 +110,7 @@ $("#nextBtn2").click(function () {
 // form page 3 progress function
 
 $("#membership-status").change(function () {
-    $("#nextBtn3").removeClass("hiddenbutton");
+    $("#nextBtn3").removeClass("hidden-button");
 });
 
 $("#nextBtn3").click(function () {
@@ -129,7 +130,7 @@ $("#nextBtn4").click(function () {
 // form page 5 progress function
 
 $("#times").change(function () {
-    $("#form-submit-button").removeClass("hiddenbutton");
+    $("#form-submit-button").removeClass("hidden-button");
 });
 
 // form refresh function
@@ -394,8 +395,8 @@ function validateUserInfo() {
 
     if ("validatedName" && "validatedEmail") {
         if (inputEmail.value.match(validRegex)) {
-            $("#nextBtn1").removeClass("hiddenbutton");
-            $("#userDetails").addClass("hiddenbutton");
+            $("#nextBtn1").removeClass("hidden-button");
+            $("#userDetails").addClass("hidden-button");
         }
         else {
             alert("Invalid email address!");
@@ -428,8 +429,8 @@ function validateBmi() {
         y = "validatedWeight";
     };
     if ("validatedHeight" && "validatedWeight") {
-        $("#nextBtn4").removeClass("hiddenbutton");
-        $("#userBmi").addClass("hiddenbutton");
+        $("#nextBtn4").removeClass("hidden-button");
+        $("#userBmi").addClass("hidden-button");
     }
 }
 
@@ -437,5 +438,9 @@ function validateBmi() {
 
 function flipCard() {
     card.classList.toggle("flipCard");
-    $("#card-header").addClass("hiddenbutton");
+    $("#card-header").addClass("hidden-button");
+}
+
+function flipCardSpace() {
+    $("#header-div").addClass("hidden-button");
 }
