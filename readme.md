@@ -11,7 +11,6 @@
 5. **Features**
 6. **Technologies**
 7. **Testing**
-   ### Footer position bug solved by putting footer all in one section
 8. **Deployment**
 9.  **Usage**
 10. **Collaboration**
@@ -39,7 +38,12 @@ Gym Planner is built using HTML5, CSS and JavaScript according to the principles
 
 For fist time visitors I imagined the user wanting to quickly and easily develop and retrieve a personalised workout plan tailored to them and their needs, without overwhelming information or overly complex data input. For frequent and returning users I wanted offer to a basic framework with which they can set and improve on their own exercise goals, and monitor their personal performance against certain external standards that regular gym goers would be already aware of. In both cases I wanted clear and easily navigable content on desktop, tablet and also mobile device so users can effectively set their goals and monitor their progress while working out or while taking some rest in their downtime. Each page of the website and each step of the form including results page will have a coherent, consistent style.
 
+![alt text](assets/images/gym-planner-user-story.png)
+
+##### User Stories
+
 ![alt text](assets/images/ux-design-principles.png)
+
 
 ##### Navigation
 
@@ -61,6 +65,8 @@ The Gym Planner logo is displayed in the header or footer of all pages, and on a
 
 ##### Wireframes
 
+![alt text](assets/images/index-wireframe.png)
+
 ###### Homepage
 
 ![alt text](assets/images/index-wireframe.png)
@@ -74,12 +80,28 @@ The Gym Planner logo is displayed in the header or footer of all pages, and on a
 
 ###### Differences
 
+Form progress bar was made using dots instead of a sliding bar on all devices. 
+The logo was moved to the bottom of the form homepage to maximise focus on the main area for mobile devices.
+The logo was made smaller for certain screen sizes.
+The results table was put inside a flip-card function not detailed in the original plan.
+
 ### Limitations
 
-No back end functionality to capture info
-No APIs for extra external linkage
+No back end functionality to capture user information for future use.
+No APIs for extra external linkage or further functionality at this stage.
+Plan titles and animal emblems are generated randomly at this stage and not tied to user input.
+Functionality to include and account for user age has yet to be implemented.
 
 ### Features
+
+- Responsive and interactive main navigation bar.
+- Call to action (CTA) button on homepage to initialise.
+- Multi step responsive form for input of user information.
+- Form progress bar
+- Responsive footer
+- Detailed reactive and interactive results page
+- Social links
+- Further details page
 
 ### Technologies
 
@@ -105,7 +127,9 @@ Google chromes built in developer tools are used to inspect page elements and he
 - **Balsamiq Wireframes**
 This was used to create wireframes for 'The Skeleton Plane' stage of UX design.
 - **place-hold.it**
-place-hold.it was used to display the colours shown in the Color Scheme section.
+Place-hold.it was used to display the colours shown in the Color Scheme section.
+-**Lucid**
+Lucid Chart was used to create the diagrams for Use Case scenarios, UX Design Principles, and Project Lifecycle planning.
 
 ### Testing
 
