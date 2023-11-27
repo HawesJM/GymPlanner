@@ -10,13 +10,14 @@
 4. **Limitations**
 5. **Features**
 6. **Technologies**
-7. **Testing**
-8. **Deployment**
-9.  **Usage**
-10. **Collaboration**
-11. **Acknowledgments**
-12. **Further Development**
-13. **Final Notes**
+7. **Development Lifecycle**
+8. **Testing**
+9. **Deployment**
+10. **Usage**
+11. **Collaboration**
+12. **Acknowledgments**
+13. **Further Development**
+14. **Final Notes**
 
 ### Introduction
 
@@ -124,13 +125,27 @@ The IDE for writing the code, using CI approved template
 - **GitHub**
 GithHub is the hosting site used to store the source code for the Website and Git Pages is used for the deployment of the live site.
 - **Google Chrome Developer Tools**
-Google chromes built in developer tools are used to inspect page elements and help debug issues with the site layout and test different CSS styles.
+Google Chrome's built in developer tools are used to inspect page elements and help debug issues with the site layout and test different CSS styles.
 - **Balsamiq Wireframes**
 This was used to create wireframes for 'The Skeleton Plane' stage of UX design.
 - **place-hold.it**
 Place-hold.it was used to display the colours shown in the Color Scheme section.
 -**Lucid**
 Lucid Chart was used to create the diagrams for Use Case scenarios, UX Design Principles, and Project Lifecycle planning.
+
+### Development Lifecycle
+
+![alt text](testing/gym-planner-life-cycle-diagram.png)
+
+**Iteration 1**
+
+-Inception: the user is looking for an application to plan their workouts.
+-Task: to meet this need the developer/programmer creates a responsive site that details the application's purpose and can hold the input form for user information.
+-Increment: form page and supporting information page are to be confirmed responsive, with clear information flow and functioning internal & external links. Then the initial commit is to be made and deployed to GitHub.
+
+**Iteration 2**
+**Iteration 3**
+**Iteration 4**
 
 ### Testing
 
