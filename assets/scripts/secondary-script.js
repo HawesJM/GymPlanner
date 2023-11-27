@@ -31,7 +31,6 @@ document.getElementById("cardio-example-span").addEventListener("click", showCar
 // get workout plan example function
 
 let allCardio = workout.lose_weight.cardio_workouts.concat(workout.build_muscle.cardio_workouts, workout.stretch.cardio_workouts);
-console.log(allCardio);
 allCardioExample = [];
 
 for (let i = 0; i < allCardio.length; i++) {
@@ -39,10 +38,7 @@ for (let i = 0; i < allCardio.length; i++) {
     allCardioExample.push(cardioCurrent);
 };
 
-console.log(allCardioExample);
-
 // print workout plan example function excluding duplicates
-
 
 let cardioExample = [];
 
@@ -56,11 +52,7 @@ for (let i = 0; i < allCardioExample.length; i++) {
 
 let cardioExampleString = cardioExample.toString();
 
-console.log(cardioExampleString);
-
 let cardioExampleStringFinal = cardioExampleString.split("|").join("");
-
-console.log(cardioExampleStringFinal);
 
 function showCardioExample() {
     document.getElementById("about-cardio-example").innerHTML += "<hr>" + "Cardio Examples:" + "<br>" + cardioExampleStringFinal + ".";
