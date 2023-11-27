@@ -38,11 +38,12 @@ Gym Planner is built using HTML5, CSS and JavaScript according to the principles
 
 For fist time visitors I imagined the user wanting to quickly and easily develop and retrieve a personalised workout plan tailored to them and their needs, without overwhelming information or overly complex data input. For frequent and returning users I wanted offer to a basic framework with which they can set and improve on their own exercise goals, and monitor their personal performance against certain external standards that regular gym goers would be already aware of. In both cases I wanted clear and easily navigable content on desktop, tablet and also mobile device so users can effectively set their goals and monitor their progress while working out or while taking some rest in their downtime. Each page of the website and each step of the form including results page will have a coherent, consistent style.
 
-![alt text](assets/images/gym-planner-user-story.png)
+![alt text](assets/images/ux-design-principles.png)
+
 
 ##### User Stories
 
-![alt text](assets/images/ux-design-principles.png)
+![alt text](assets/images/gym-planner-user-story.png)
 
 
 ##### Navigation
@@ -168,18 +169,18 @@ For First Time and Returning Users I want to test to ensure that their particula
 
 ##### Manual Testing Report
 
-![alt text](assets/images/gym-planner-manual-testing-img.png)
+![alt text](testing/gym-planner-manual-testing-img.png)
 
 Video 1: testing/gym-planner-responsivity-full-test.mkv
 Video 2: testing/gym-planner-links-test.mkv
 Video 3: testing/gym-planner-form-input-test.mkv
 Video 4: testing/gym-planner-form-validation-test.mkv
 
-![alt text](assets/images/gym-planner-index-html-validator.png)
-![alt text](assets/images/gym-planner-about-html-validator.png)
-![alt text](assets/images/gym-planner-css-vaidator.png)
-![alt text](assets/images/gym-planner-index-lighthouse-testing-img.png)
-![alt text](assets/images/gym-planner-about-lighthouse-testing-img.png)
+![alt text](testing/gym-planner-index-html-validator.png)
+![alt text](testing/gym-planner-about-html-validator.png)
+![alt text](testing/gym-planner-css-vaidator.png)
+![alt text](testing/gym-planner-index-lighthouse-testing-img.png)
+![alt text](testing/gym-planner-about-lighthouse-testing-img.png)
 
 ### Deployment
 
