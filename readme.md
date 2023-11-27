@@ -200,14 +200,14 @@ For First Time and Returning Users I want to test to ensure that their particula
 
 ![alt text](testing/gym-planner-manual-testing-img.png)
 
-Video 1: testing/gym-planner-responsivity-full-test.mkv
-Video 2: testing/gym-planner-links-test.mkv
-Video 3: testing/gym-planner-form-input-test.mkv
-Video 4: testing/gym-planner-form-validation-test.mkv
+- Video 1: testing/gym-planner-responsivity-full-test.mkv
+- Video 2: testing/gym-planner-links-test.mkv
+- Video 3: testing/gym-planner-form-input-test.mkv
+- Video 4: testing/gym-planner-form-validation-test.mkv
 
 ![alt text](testing/gym-planner-index-html-validator.png)
 ![alt text](testing/gym-planner-about-html-validator.png)
-![alt text](testing/gym-planner-css-vaidator.png)
+![alt text](testing/gym-planner-css-validator.png)
 ![alt text](testing/gym-planner-index-lighthouse-testing.png)
 ![alt text](testing/gym-planner-about-lighthouse-testing.png)
 

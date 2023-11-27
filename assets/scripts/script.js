@@ -143,7 +143,6 @@ $("#refresh-button").click(function () {
 
 function getUserDetails(event) {
     event.preventDefault();
-    console.log(userData);
     userData["name"] = document.getElementById("inputName").value;
     userData["email"] = document.getElementById("inputEmail").value;
     userData["workout_goal"] = document.querySelector('input[name="workout-type"]:checked').value;
@@ -152,39 +151,31 @@ function getUserDetails(event) {
     userData["weight"] = document.getElementById("inputWeight").value;
     userData["workout_length"] = document.querySelector('input[name="gymtime"]:checked').value;
     bmi = (userData.weight / (userData.height * userData.height) * 10000);
-    console.log(bmi);
-    console.log(userData.workout_length);
 
     // to build specific workout plan based on selections and input
 
     if (document.getElementById("gym30").checked === true && bmi > 25) {
         workoutSpecifics = thirtySixtyPlan.thirtySixtyPlanATimings;
-        console.log("plan30");
     }
     else if
         (document.getElementById("gym60").checked === true && bmi > 25) {
         workoutSpecifics = sixtyNinetyPlan.sixtyNinetyPlanATimings;
-        console.log("plan60hallelujah");
     }
     else if
         (document.getElementById("gym90").checked === true && bmi > 25) {
         workoutSpecifics = ninetyOneTwentyPlan.ninetyOneTwentyPlanATimings;
-        console.log("plan90");
     }
     else if
         (document.getElementById("gym30").checked === true && bmi < 25) {
         workoutSpecifics = thirtySixtyPlan.thirtySixtyPlanBTimings;
-        console.log("specialsausage");
     }
     else if
         (document.getElementById("gym60").checked === true && bmi < 25) {
         workoutSpecifics = sixtyNinetyPlan.sixtyNinetyPlanBTimings;
-        console.log("specialsausages");
     }
     else if
         (document.getElementById("gym90").checked === true && bmi < 25) {
         workoutSpecifics = ninetyOneTwentyPlan.ninetyOneTwentyPlanBTimings;
-        console.log("specialsausagesausage");
     }
 }
 
@@ -229,7 +220,6 @@ function enduranceAndFitness() {
     if (bmi > 25) {
         document.getElementById("workout_frequency").innerHTML += workout.lose_weight.workout_frequency[0] + " times a week";
         let [cardio1, cardio2, cardio3] = workout.lose_weight.cardio_workouts;
-        console.log(cardio1, cardio2, cardio3);
         document.getElementById("primary_type").innerHTML = "Cardio";
         document.getElementById("secondary_type").innerHTML = "None";
         document.getElementById("cardio_exercises").innerHTML += cardio1 + cardio2 + cardio3;
@@ -238,9 +228,7 @@ function enduranceAndFitness() {
         document.getElementById("plan_specifics").innerHTML += workoutSpecifics;
 
     } else {
-        console.log(bmi);
         let upTo = " up to " + workout.lose_weight.workout_frequency[1] + " times a week";
-        console.log(upTo);
         let [weights1, weights2] = workout.lose_weight.weights_workouts;
         let [cardio1, cardio2, cardio3, cardio4] = workout.lose_weight.cardio_workouts;
         document.getElementById("workout_frequency").innerHTML += upTo;
@@ -259,7 +247,6 @@ function strengthAndSculpture() {
         document.getElementById("workout_frequency").innerHTML += workout.build_muscle.workout_frequency[0] + " times a week";
         let [weights1, weights2, weights3] = workout.build_muscle.weights_workouts;
         document.getElementById("weights_exercises").innerHTML += weights1 + weights2 + weights3;
-        console.log(workout.build_muscle.weights_workouts);
         let [buildCardio1] = workout.build_muscle.cardio_workouts;
         document.getElementById("primary_type").innerHTML = "Weights";
         document.getElementById("secondary_type").innerHTML = "Rowing Cooldown";
@@ -269,10 +256,8 @@ function strengthAndSculpture() {
         document.getElementById("plan_specifics").innerHTML += workoutSpecifics;
     }
     else {
-        console.log(bmi);
         let upTo = " up to " + workout.build_muscle.workout_frequency[1] + " times a week";
         document.getElementById("plan_number").innerHTML = Math.floor(Math.random() * 1000);
-        console.log(upTo);
         document.getElementById("workout_frequency").innerHTML += upTo;
         document.getElementById("primary_type").innerHTML = "Weights";
         document.getElementById("secondary_type").innerHTML = "Light Cardio/Resistance";
@@ -285,7 +270,6 @@ function strengthAndSculpture() {
 }
 
 function balanceAndFlexibility() {
-    console.log("balance");
     if (bmi > 25) {
         document.getElementById("workout_frequency").innerHTML += workout.stretch.workout_frequency[0] + " times a week";
         let [stretches1, stretches2, stretches3, stretches4, stretches5] = workout.stretch.stretches;
@@ -298,7 +282,6 @@ function balanceAndFlexibility() {
         document.getElementById("additional").innerHTML += "Secondary Workout Cooldowns";
     }
     else {
-        console.log(bmi);
         let [stretches1, stretches2, stretches3, stretches4, stretches5, stretches6] = workout.stretch.stretches;
         let [poses1, poses2, poses3] = workout.stretch.poses;
         document.getElementById("workout_frequency").innerHTML += workout.stretch.workout_frequency[1] + " times a week";
@@ -318,10 +301,8 @@ function balanceAndFlexibility() {
 function generate() {
     userVerb = verbs[
         Math.floor(Math.random() * verbs.length)];
-    console.log(userVerb);
     userNoun = nouns[
         Math.floor(Math.random() * nouns.length)];
-    console.log(userNoun);
     let planNick = userVerb + userNoun;
     document.getElementById("plan_heading").innerHTML += planNick;
     if (userNoun.includes("Tiger")) {
@@ -366,7 +347,6 @@ function resources() {
 
 function dateTime() {
     let datetime = new Date();
-    console.log(datetime);
     document.getElementById("plan_date").innerHTML += datetime;
 }
 
@@ -374,7 +354,6 @@ function dateTime() {
 
 function validateUserInfo() {
     let x = document.getElementById("inputEmail").value;
-    console.log(x);
     if (x == "") {
         alert("your name and email address must be entered to proceed");
         return false;
@@ -384,7 +363,6 @@ function validateUserInfo() {
     };
 
     let y = document.getElementById("inputName").value;
-    console.log(y);
     if (y == "") {
         alert("your name and email address must be entered to proceed");
         return false;
@@ -410,7 +388,6 @@ function validateUserInfo() {
 
 function validateBmi() {
     let x = document.getElementById("inputHeight").value;
-    console.log(x);
     if (x == "") {
         alert("your height and weight must be entered to proceed");
         return false;
@@ -420,7 +397,6 @@ function validateBmi() {
     };
 
     let y = document.getElementById("inputWeight").value;
-    console.log(y);
     if (y == "") {
         alert("your height and weight must be entered to proceed");
         return false;
