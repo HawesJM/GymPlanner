@@ -24,7 +24,7 @@ Gym Planner is a web application designed to aid the individual user in developi
 
 The concept was developed for the purpose of completing the second Milestone Project for the Code Institute's Full Stack Developer course. It was built to express the knowledge and skills gained from the HTML, CSS, User Centric Design and Interactive Front End Development modules.
 
-The live website can be found here
+The live website can be found here https://hawesjm.github.io/GymPlanner/
 
 ### Structure
 
@@ -133,6 +133,8 @@ Lucid Chart was used to create the diagrams for Use Case scenarios, UX Design Pr
 
 ### Testing
 
+#### Manual Testing
+
 ##### Strategy
 
 ##### Initial Bugs
@@ -155,7 +157,7 @@ A clone of the project will be created locally on your machine.
 
 ### Usage
 
-The page is publicly available at <https://hawesjm.github.io/GymSpotter/> for users to access freely and navigate accordingly. No login details necessary to fully navigate the site and browse the information contained therein.
+The page is publicly available at <https://hawesjm.github.io/GymPlanner/> for users to access freely and navigate accordingly. No login details necessary to fully navigate the site and browse the information contained therein.
 
 ### Collaboration
 
