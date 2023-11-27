@@ -210,6 +210,8 @@ For First Time and Returning Users I want to test to ensure that their particula
 ![alt text](testing/gym-planner-css-validator.png)
 ![alt text](testing/gym-planner-index-lighthouse-testing.png)
 ![alt text](testing/gym-planner-about-lighthouse-testing.png)
+![alt text](testing/gym-planner-index-wave-testing.png)
+![alt text](testing/gym-planner-about-wave-testing.png)
 
 ### Deployment
 

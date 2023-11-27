@@ -143,13 +143,13 @@ $("#refresh-button").click(function () {
 
 function getUserDetails(event) {
     event.preventDefault();
-    userData["name"] = document.getElementById("inputName").value;
-    userData["email"] = document.getElementById("inputEmail").value;
-    userData["workout_goal"] = document.querySelector('input[name="workout-type"]:checked').value;
-    userData["gym_access"] = document.querySelector('input[name="gymaccess"]:checked').value;
-    userData["height"] = document.getElementById("inputHeight").value;
-    userData["weight"] = document.getElementById("inputWeight").value;
-    userData["workout_length"] = document.querySelector('input[name="gymtime"]:checked').value;
+    userData.name = document.getElementById("inputName").value;
+    userData.email = document.getElementById("inputEmail").value;
+    userData.workout_goal = document.querySelector('input[name="workout-type"]:checked').value;
+    userData.gym_access = document.querySelector('input[name="gymaccess"]:checked').value;
+    userData.height = document.getElementById("inputHeight").value;
+    userData.weight = document.getElementById("inputWeight").value;
+    userData.workout_length = document.querySelector('input[name="gymtime"]:checked').value;
     bmi = (userData.weight / (userData.height * userData.height) * 10000);
 
     // to build specific workout plan based on selections and input
@@ -360,7 +360,7 @@ function validateUserInfo() {
     }
     else {
         x = "validatedEmail";
-    };
+    }
 
     let y = document.getElementById("inputName").value;
     if (y == "") {
@@ -369,7 +369,7 @@ function validateUserInfo() {
     }
     else {
         y = "validatedName";
-    };
+    }
 
     if ("validatedName" && "validatedEmail") {
         if (inputEmail.value.match(validRegex)) {
@@ -383,7 +383,7 @@ function validateUserInfo() {
 
             return false;
         }
-    };
+    }
 }
 
 function validateBmi() {
@@ -394,7 +394,7 @@ function validateBmi() {
     }
     else {
         x = "validatedHeight";
-    };
+    }
 
     let y = document.getElementById("inputWeight").value;
     if (y == "") {
@@ -403,7 +403,7 @@ function validateBmi() {
     }
     else {
         y = "validatedWeight";
-    };
+    }
     if ("validatedHeight" && "validatedWeight") {
         $("#nextBtn4").removeClass("hidden-button");
         $("#userBmi").addClass("hidden-button");

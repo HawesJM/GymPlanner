@@ -36,7 +36,7 @@ allCardioExample = [];
 for (let i = 0; i < allCardio.length; i++) {
     cardioCurrent = allCardio[i];
     allCardioExample.push(cardioCurrent);
-};
+}
 
 // print workout plan example function excluding duplicates
 
@@ -46,7 +46,7 @@ for (let i = 0; i < allCardioExample.length; i++) {
     if (cardioExample.indexOf(allCardioExample[i]) === -1) {
         cardioExample.push(allCardioExample[i]);
     }
-};
+}
 
 // print workout plan example function excluding pipe symbol
 
@@ -58,4 +58,4 @@ function showCardioExample() {
     document.getElementById("about-cardio-example").innerHTML += "<hr>" + "Cardio Examples:" + "<br>" + cardioExampleStringFinal + ".";
     document.getElementById("about-cardio-example").classList.remove("about-cardio-hidden");
     document.getElementById("cardio-example-span").classList.add("about-cardio-hidden");
-};
+}
