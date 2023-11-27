@@ -133,17 +133,57 @@ Lucid Chart was used to create the diagrams for Use Case scenarios, UX Design Pr
 
 ### Testing
 
-#### Manual Testing
-
 ##### Strategy
 
-##### Initial Bugs
+This project depends upon interactivity and reactivity to user input and actions, so the majority of testing is designed to ensure interactive elements function correctly. However this functionality needs to be contained in a site that meets responsivity and accessibility guidelines so procedures to test and ensure this will also be implemented.
+
+All elements should remain on the screen at sizes above 300px.
+All internal nav links should direct to the correct pages.
+All external links should open in a new window.
+All form inputs should be validated on submission.
+Form results should vary depending on user submitted information.
+
+##### Initial Bugs (pre-deployment)
+
+CTA button positioning on mobile - solved with media query
+Collapsible nav bar not responding on mobile - solved with Bootstrap
+Radio buttons could be clicked simply by clicking near them, progressing the form without correct input - solved by using event listener for "change" instead of "click".
+About page example variable printed with commas, solved with for loop and "join" method.
+White space below footer, solved with position relative in CSS
+Form submission using enter button, solved by using a function to cancel enter keypress
+Main script throwing errors on about page since it depended on elements present only in Homepage/Form Page (index.html), solved by creating a secondary script and linking tht to about.html instead
 
 ##### Testing Methodology
 
-##### Testing Report
+For First Time Users I want to test to ensure the responsiveness of the application on multiple screensizes. This to ensure that whatever device they use they can quickly and conveniently access the application's information and functionality to achieve their goals.
+For Returning Users responsivity is key to ensure the user can create new plans as they progress and their information changes, on any device and from any location, even while working out.
+
+For First Time and Returning Users I want to test to ensure that all functionality is easily navigable and accessible, testing on all internal links is therefore necessary.
+
+For First Time and Returning Users I want to test to ensure that all external links function correctly so they can find external resources and keep informed of Gym Planner's updates on social media.
+
+For First Time and Returning Users I want to test to ensure that all inputs are clearly signalled, form steps are easy to follow, and results are reactive to user input and specific to each session on the applcation.
+
+For First Time and Returning Users I want to test to ensure that their particular results are achieved and displayed in an application that combines easy to use intuitive functionllity with compelling and consistent design.
+
+##### Manual Testing Report
+
+![alt text](assets/images/gym-planner-manual-testing-img.png)
+
+Video 1: testing/gym-planner-responsivity-full-test.mkv
+Video 2: testing/gym-planner-links-test.mkv
+Video 3: testing/gym-planner-form-input-test.mkv
+Video 4: testing/gym-planner-form-validation-test.mkv
+
+![alt text](assets/images/gym-planner-index-html-validator.png)
+![alt text](assets/images/gym-planner-about-html-validator.png)
+![alt text](assets/images/gym-planner-css-vaidator.png)
+![alt text](assets/images/gym-planner-index-lighthouse-testing-img.png)
+![alt text](assets/images/gym-planner-about-lighthouse-testing-img.png)
 
 ### Deployment
+
+No further bugs found between development and deployment as per videos.
 
 Deployed to GitHub pages via "Main" branch using the "pages build and deployment" workflow.
 
@@ -169,6 +209,11 @@ I'd like to thank my Code Institute assigned mentor Daisy McGirr for her support
 
 ### Further Development
 
-It is my intention that GymSpotter becomes the initial part of a larger series of related projects to create an interactive fitness community. As such no code is to be copied or shared externally without express permission.
+It is my intention that GymPlanner becomes the initial part of a larger series of related projects to create an interactive fitness community. As such no code is to be copied or shared externally without express permission.
+
+Age based functionality.
+Relevant API linkage.
+The ability to share and print plans.
+Backend functionality to record user workout progress.
 
 #### Final Notes
