@@ -139,13 +139,27 @@ Lucid Chart was used to create the diagrams for Use Case scenarios, UX Design Pr
 
 **Iteration 1**
 
--Inception: the user is looking for an application to plan their workouts.
--Task: to meet this need the developer/programmer creates a responsive site that details the application's purpose and can hold the input form for user information.
--Increment: form page and supporting information page are to be confirmed responsive, with clear information flow and functioning internal & external links. Then the initial commit is to be made and deployed to GitHub.
+- Inception: the user is looking for an application to plan their workouts.
+- Task: to meet this need the developer/programmer creates a responsive site that details the application's purpose and can hold the input form for user information.
+- Increment: form page and supporting information page are to be confirmed responsive, with clear information flow and functioning internal & external links. Then the initial commit is to be made to GitHub as the basis for future deployment.
 
 **Iteration 2**
+
+- Inception: the user wants to enter their information into the application to receive an individual workout plan tailored to their metrics and needs.
+- Task: to meet this need the developer/programmer creates a responsive multi-stage form with relevant input fields to contain this information.
+- Increment: once the form container has been created, has been tested for responsiveness and for input field validation, the form structure is to be committed to GitHub as the basis for future deployment.
+
 **Iteration 3**
+
+- Inception: the user wants to receive, view and record the individual workout plan the application produces for them following the correct submission of their required information.
+- Task: to meet this need the developer/programmer creates a series of functions within their script to act upon and convert the user submitted data into an informative, compelling and useful end product for each individual user and for each separate session on the application.
+- Increment: once sufficient functionality has been included in the script to manage individual user data and provide unique identifiers for each plan, the code will be tested and if without errors will be committed to GitHub as the basis for future deployment.
+  
 **Iteration 4**
+
+- Inception: having fulfilled their need through the application's functionality, the user may wish to return to the application at a later date to enter new information or look for more information and related resources.
+- Task: as well as creating a responsive form with relevant scripts to handle new data inputs the developer/programmer will include supporting information and external resources both in the plan itself and in a related but separate page on the site.
+- Increment: Once this page has been successfully tested for code, responsiveness and accessibility it will be committed to GitHub as the final pre-deployment stage.
 
 ### Testing
 
@@ -194,8 +208,8 @@ Video 4: testing/gym-planner-form-validation-test.mkv
 ![alt text](testing/gym-planner-index-html-validator.png)
 ![alt text](testing/gym-planner-about-html-validator.png)
 ![alt text](testing/gym-planner-css-vaidator.png)
-![alt text](testing/gym-planner-index-lighthouse-testing-img.png)
-![alt text](testing/gym-planner-about-lighthouse-testing-img.png)
+![alt text](testing/gym-planner-index-lighthouse-testing.png)
+![alt text](testing/gym-planner-about-lighthouse-testing.png)
 
 ### Deployment
 
