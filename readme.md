@@ -67,8 +67,6 @@ The Gym Planner logo is displayed in the header or footer of all pages, and on a
 
 ##### Wireframes
 
-![alt text](assets/images/index-wireframe.png)
-
 ###### Homepage
 
 ![alt text](assets/images/index-wireframe.png)
@@ -212,6 +210,8 @@ For First Time and Returning Users I want to test to ensure that their particula
 ![alt text](testing/gym-planner-about-lighthouse-testing.png)
 ![alt text](testing/gym-planner-index-wave-testing.png)
 ![alt text](testing/gym-planner-about-wave-testing.png)
+![alt text](testing/jshint-script-test.png)
+![alt text](testing/jshint-secondary-script-test.png)
 
 ### Deployment
 
